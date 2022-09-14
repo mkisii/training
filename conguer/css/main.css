@@ -1,0 +1,302 @@
+
+body {
+	margin: o;
+	padding: 0;
+	font-family: sans-serif;
+	background: ;
+}
+
+#main-header {
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+}
+.navbar {
+
+	background-color: black;
+	height: 50px;
+}
+
+.navbar-items {
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+	padding-top: 10px;
+}
+
+.navbar .navbar-items .navbar-item {
+	display: inline;
+	border: 1px solid gray;
+	text-align: center;
+
+
+
+}
+
+.navbar .navbar-items .navbar-item a {
+	text-decoration: none;
+	padding-right: 15px;
+	color: white;
+	font-size: 18px;
+
+}
+
+#landing-page{
+	background-image: url("../img/bg-1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 400px;
+	text-align: center;
+}
+
+
+.landing-page-item {
+	padding: 25px;
+
+} 
+
+.landing-page-item h1 {
+	color: white;
+	text-transform: uppercase ;
+	font-size: 50px;
+}
+
+.landing-page-item p {
+	text-transform: capitalize;
+	color: white;
+	padding-top: inherit;
+}
+
+#container {
+	width: 80%;
+	margin: auto;
+	padding: 30px;
+
+}
+
+.main-container {
+	display: block;
+
+}
+.main-container .container-items-first  {
+	padding: 10px;
+}
+
+.main-container .container-items-first .container-item {
+	
+	float: left;
+	width: 33.3%;
+	padding: 20px;
+	box-sizing: border-box;
+	background-color: lightgray;
+
+}
+
+.main-container .container-items-first .container-item .image-pages img{
+	width: 100%;
+	height: 45%;
+	object-fit: cover;
+}
+
+.main-container .container-items-first .container-item .page-1 {
+	padding-left: 5px;
+	color: green;
+
+}
+.main-container .container-items-first .container-item .page-2 {
+
+	padding-left: 5px;
+	color: #3258a8;
+	font-weight: bold;
+}
+.main-container .container-items-first .container-item .page-3 {
+	padding-left: 5px;
+	color: gray;
+}
+
+.main-container .container-items-first .container-item p {
+	font-size: 20px;
+	line-height: 2.5rem;
+
+}
+.button {
+	display: flex;
+ 	justify-content: center;
+  align-items: center;
+
+	
+}
+
+
+
+.main-container .container-items-first .container-item .button-1 {
+
+	color: white;
+	background-color: green;
+	padding: 15px 32px;
+  font-size: 16px;
+  border-radius: 5px;
+	
+	
+
+
+}
+
+.main-container .container-items-first .container-item .button-2 {
+	color: white;
+	background-color: #3258a8;
+  padding: 15px 32px;
+  font-size: 16px;
+  border-radius: 5px;
+  
+
+}
+
+.main-container .container-items-first .container-item .button-3 {
+	background-color: red;
+	padding: 15px 32px;
+  font-size: 16px;
+  border-radius: 5px;
+  
+
+}
+
+
+.container-items-second{
+	display: flex;
+	width: 100%;
+	box-sizing: border-box;
+	margin-top: 10px;
+	padding: 20px;
+}
+
+.container-items-second .blogs-item .image-blog img{
+
+	width: 100%;
+	height: 45%;
+	object-fit: cover;
+
+}
+
+.container-items-second .blogs-item  h2{
+	font-size: 20px;
+	text-align: center;
+}
+
+.container-items-second .blogs-item p{
+	font-size: 20px;
+	font-family: serif sans-serif;
+	line-height: 3rem;
+}
+
+.container-items-second .blogs-item .button-4{
+
+	background-color: white;
+	padding: 15px 32px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+/*Service section*/
+
+#services {
+	background-image: url("../img/bg-2.jpg");
+	width: 100%;
+	height: 250px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+
+.services-item {
+	padding: 20px;
+	color: white;
+
+}
+
+
+#posts{
+
+	width: 80%;
+	margin: auto;
+	padding: 30px;
+
+}
+
+.posts-container {
+	display: block;
+}
+
+.posts-container .posts-container-items-first .posts-item {
+	
+  float: left;
+	width: 25%;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.posts-container .posts-container-items-first .posts-item .image-post img{
+
+	width: 100%;
+	height: 50%;
+	object-fit: cover;
+}
+
+.posts.container-items-second{
+	display: flex;
+	width: 100%;
+	box-sizing: border-box;
+	margin-top: 10px;
+	padding: 20px;
+}
+
+.posts-container .posts-container-items-first .posts-item .image-post h2, p{
+
+	font-size: 20px;
+	font-family: sans-serif;
+	line-height: 3rem;
+
+
+}
+
+
+.posts-container .posts-container-items-second .posts-item .image-posts img{
+	width: 100%;
+	height: 40%;
+	object-fit: cover;
+
+}
+
+/*Contact Section*/
+
+#contact{
+	background-image: url("../img/bg-3.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 250px;
+	background-position: center center;
+}
+
+.contact-container {
+	
+	
+	text-align: center;
+	color: white;
+
+}
+
+.contact-container .contact-form  {
+	display: block;
+}
+
+#main-footer {
+	width: 100%;
+	height: 45px;
+	text-align: center;
+	background-color: ghostwhite;
+}
+
+#main-footer h2 {
+	color: black;
+}
+
