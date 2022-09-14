@@ -196,7 +196,7 @@ p {
 }
 
 .property-show {
-  background-image: url("../img/bg-3.jpg");
+  background-image: url("../img/Land-2.jpg");
   background-attachment: fixed;
   background-size: cover;
 }
@@ -268,7 +268,12 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  /* position: relative; */
+}
+.featured-image > img {
+  height: 100%;
+  width: 40%;
+  object-fit: cover;
 }
 
 .featured {
@@ -348,7 +353,6 @@ p {
 
 .property-category-item2 .rows2 {
   display: grid;
-  alignment-baseline: middle;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 2rem;
 }
