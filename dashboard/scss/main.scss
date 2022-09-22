@@ -1,0 +1,195 @@
+$primary-color:#5570f1;
+$graphy-color:#ffcc91;
+$icons-color: #97a5eb;
+$icons-support-color:#efeff0;
+$icons-gift-color:#fff5e9;
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+.main-body{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-gap: 10px;
+    
+}
+.sidebar{
+    // background-color: $primary-color;
+
+    
+}
+.body-content{
+    background-color: $graphy-color;
+}
+
+.main-sidebar{
+    padding-left: 10px;
+
+    .log {
+        padding: 30px;
+        color: $icons-color;
+        background-color: #5570f1;
+        align-items: center;
+        justify-content: center;
+
+        &_image >img{
+            color: $icons-color;
+
+        }
+    }
+}
+//Side bar
+.main-sidebar-content {
+    margin-top: 20px;
+    // background: $primary-color;
+    padding: 30px;
+
+    .logo_button {
+
+        background-color: $primary-color;
+        width: 50%;
+        border-radius: 10px;
+    }
+
+    .logo-icon{
+        display: flex;
+        align-items: center;
+        margin-inline-start: 10px;
+        padding-left: 30px;
+        border-radius: 10%;
+        height: 0 auto;
+        
+        &_image{
+            width: 50px;
+            height: 50px;
+
+        }
+        &_image>img{
+
+            align-self: auto;
+            width: 50%;
+            height: 100%;
+            color: $icons-color;
+
+        }
+        &_title>h2{
+            color: white;
+            font-size: 20px;
+        }
+    }
+
+}
+// Side bar content
+.categories{
+    margin-top: 10px;
+    // background-color: #97a5eb;
+    // Categories Orders
+    &_orders ,
+     &_customers,
+      &_inventorys,
+      &_conversations,
+      &_settings{
+        display: flex;
+        padding-left:30px;
+        margin-inline-start: 10px;
+
+        &_image{
+
+            width: 50px;
+            height: 60px;
+            // background-color: aqua;
+            align-items: center;
+    
+        }
+        &_image>img{
+    
+            align-self: auto;
+            width: 50%;
+            height: 50%;
+            color: $icons-color;
+            padding-left: 10px;
+    
+        }
+        &_title>h2{
+            color:gray;
+            font-size: 20px;
+            margin-top: 6px;
+        }
+    }
+    // Categories Customers
+        
+ }
+
+ .contact {
+    background-color: $icons-support-color;
+    border-radius: 10px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+
+
+    &_image{
+
+        width: 50px;
+        height: 50px;
+        margin-top: 10px;
+
+    }
+    &_image>img{
+
+        align-self: auto;
+        width: 50%;
+        height: 60%;
+        color: $icons-color;
+        padding-left: 15px;
+
+    }
+    &_title>h2{
+        color:gray;
+        font-size: 20px;
+        margin-top: 6px;
+    }
+    
+ }
+
+ .gifts {
+    width: 50%;
+    height: 80%;
+    background-color: $icons-gift-color;
+    display: flex;
+
+    &_image{
+
+        width: 50px;
+        height: 50px;
+        margin-top: 10px;
+
+    }
+    &_image>img{
+
+        align-self: auto;
+        width: 50%;
+        height: 60%;
+        color: $icons-color;
+        padding-left: 15px;
+
+    }
+    &_title>h2{
+        color:gray;
+        font-size: 20px;
+        margin-top: 6px;
+    }
+    &_paragraph > p{
+        background-color: yellow;
+        // align-items:flex-end ;
+        flex-direction: column;
+    }
+
+
+
+
+ }
