@@ -1,13 +1,16 @@
 $primary-color:#5570f1;
 $graphy-color:#ffcc91;
 $icons-color: #97a5eb;
+$icons-background-color:#fff7ed;
 $icons-support-color:#efeff0;
 $icons-gift-color:#fff5e9;
+$text-color:#5c5d64;
 
 body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    max-width:100%;
 
 }
 .main-body{
@@ -16,11 +19,14 @@ body {
     grid-gap: 10px;
     
 }
-.sidebar{
-    // background-color: $primary-color;
+// .sidebar:hover{
+//     background-color: $primary-color;
+//     width:10px;
+//     overflow:hidden;
+//     margin-left:-60px;
 
     
-}
+
 .body-content{
     background-color: $graphy-color;
 }
@@ -47,18 +53,17 @@ body {
     // background: $primary-color;
     padding: 30px;
 
-    .logo_button {
+    .main_logo {
 
         background-color: $primary-color;
-        width: 50%;
+        width: 70%;
         border-radius: 10px;
     }
 
     .logo-icon{
         display: flex;
         align-items: center;
-        margin-inline-start: 10px;
-        padding-left: 30px;
+        justify-content: space-around;
         border-radius: 10%;
         height: 0 auto;
         
@@ -72,6 +77,7 @@ body {
             align-self: auto;
             width: 50%;
             height: 100%;
+            padding-left: 30px;
             color: $icons-color;
 
         }
@@ -93,7 +99,7 @@ body {
       &_conversations,
       &_settings{
         display: flex;
-        padding-left:30px;
+        padding-left:25px;
         margin-inline-start: 10px;
 
         &_image{
@@ -124,13 +130,15 @@ body {
  }
 
  .contact {
+    margin-top: 300px;
     background-color: $icons-support-color;
     border-radius: 10px;
-    width: 50%;
+    width: 70%;
     display: flex;
     align-items: center;
-    padding-left: 30px;
-
+    justify-content: space-around;
+    // padding-left: 20px;
+    
 
     &_image{
 
@@ -142,16 +150,17 @@ body {
     &_image>img{
 
         align-self: auto;
-        width: 50%;
-        height: 60%;
+        width:50%;
+        height: 50%;
         color: $icons-color;
-        padding-left: 15px;
+        padding-left: 30px;
 
     }
     &_title>h2{
         color:gray;
         font-size: 20px;
         margin-top: 6px;
+        
     }
     
  }
@@ -178,18 +187,260 @@ body {
         padding-left: 15px;
 
     }
+
     &_title>h2{
         color:gray;
         font-size: 20px;
         margin-top: 6px;
     }
-    &_paragraph > p{
-        background-color: yellow;
-        // align-items:flex-end ;
-        flex-direction: column;
-    }
-
-
-
 
  }
+
+//  Header Section
+
+.main_header{
+    
+    display: flex;
+    height: 12vh;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white ;   
+    
+
+    &_title{
+        padding-left: 10px;
+        font-size: 12px;
+    }
+    &_title>span{
+        color: $primary-color;
+        
+    }
+
+    &_profile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 20px;
+
+        &_text {
+            background-color: $icons-support-color;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            width: 150px;
+            height: 40px;
+            justify-content: space-around;
+            align-items: center;
+            margin-inline-end: 10px;
+        }
+    }
+    &_profile>span{
+        padding-right: 10px;
+        color: $primary-color;
+
+    }
+    &_image{
+        width: 40px;
+        height: 20px;
+    }
+    &_image>img{
+        object-fit: cover;
+    }
+
+}
+
+
+
+
+.main_body_content_upper,
+.main_body_content_middle{
+    display: grid;
+    grid-template-columns: 3fr 3fr 4fr ;
+    grid-gap: 10px;
+    margin-bottom: 20px;
+
+    &_left,
+    &_middle,
+    &_right{
+        // margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        width: 100%;
+        // height: 16vh;
+        justify-content: space-between;
+        background-color: #f4f5fa;
+        border-radius: 10px;
+        
+        &_top{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            padding-left: 10px;
+
+            &_icon {
+                background-color: $icons-support-color;
+                // background-color: black;
+                width: 30px;
+                height: 26px;
+                padding-left: 10px;
+                border-radius: 10px;
+                align-items: center;
+                justify-content: center;
+            }
+            &_icon>img{
+                object-fit: cover;
+                text-align: center;
+                align-items: center;
+            }
+         
+            &_text{
+                border-radius: 10px;
+                display: flex;
+                flex-direction: row;
+                width: 100px;
+                color: gray;
+                justify-content: space-around;
+                align-items: center;
+                padding-right: 20px;
+            }
+            &_info{
+                display: flex;
+                justify-content: space-between;
+           
+                
+            }
+            &_info_acquisition>span,
+            &_info_purchase>span,
+            &_info_retention>span{
+                border-radius: 10px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-right: 10px;
+                margin-inline-end: 10px;
+                margin-top: -5px;
+
+            }&_chart{
+                display: flex;
+                width: 100%;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+                margin-top: -12rem;
+                
+                &_info {
+                    background:conic-gradient(#5570f1,#ffcc91,#97a5eb);
+                    align-items: center;
+                    border-radius: 50%;
+                    width: 300px;
+                    height: 300px;
+                    border: 5px , linear-gradient #5570f1;
+                    
+                }
+            }
+
+        }
+        &_bottom{
+
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            padding-left: 10px;
+
+            &_sales, p{
+                color: gray;
+                font-size: 12px;
+            }
+
+            &_valumes,h2 {
+                color:$text-color;
+                padding-right: 45px;
+                
+    
+            }
+            &_valumes_title ,h2 >span{
+                color: green;
+                font-size: 10px ;
+            }
+        }
+        &_products{
+            
+            padding-top: 10px;
+            color: white; 
+            // height: 35vh;
+            
+            &_top {
+                padding-top: 10px;
+                background-color: $primary-color;
+                border-radius: 10px;
+                &_bottom, .all-products{
+                    margin-top: 80px;
+                    color: white; 
+                }
+                &_bottom, .figures {
+                    color: white    ;
+                }
+                &_bottom, .figures> span {
+                    color: white;
+                }
+
+
+            }
+            &_bottom{
+                margin-top: 20px;
+                background-color: white;
+                border-radius: 10px;
+                
+                &_bottom_info , .title{
+                    color: red;
+                }
+                &_bottom_info, .heading{
+                    color: black;
+                }
+
+            }
+        }
+        &_orders {
+            background-color: #f4f5fa;
+            border-radius: 10px;
+            .complete{
+                color: green;
+            }
+            .pending{
+                color: red;
+            }
+        }
+
+            
+    }
+    &_middle_top_icon ,
+    &_right_top_icon{
+        background-color:$icons-background-color;
+    }
+
+    
+}
+.main_body_content_middle{
+
+}
+
+
+.main_body_content_bottom {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 3fr;
+    width: 60%;
+  
+  
+}
+
+// .main_body_content_middle{
+//     display: grid;
+//     grid-template-columns: 3fr 3fr 4fr;
+//     grid-gap: 10px;
+//     background-color: white;
+// }
