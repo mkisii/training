@@ -10,6 +10,9 @@
     <script src="https://kit.fontawesome.com/88e836c606.js" crossorigin="anonymous"></script>
     <title>Dashboard</title>
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -17,8 +20,9 @@
         <!-- The sidebar section -->
         <section id="asidebar" class="sidebar">
             <div class="main-sidebar">
-                <div class="log">
-                    <img class="log_image" src="../icons/logo.svg" alt="">
+                <div class="main-sidebar_log">
+                    <img class="main-sidebar_log_image" src="../icons/Group.svg" alt="">
+                    <span>Metrix</span>
                 </div>
                 <div class="main-sidebar-content">
 
@@ -43,7 +47,8 @@
 
                             </div>
                             <div class="categories_orders_title">
-                                <h2>Order</h2>
+                                <a href="../home/orders.html">Order</a>
+                              
                             </div>
                         </div>
                         <div class="categories_customers">
@@ -52,9 +57,7 @@
                                 <img src="../icons/user.svg" alt="">
                             </div>
                             <div class="categories_customers_title">
-
-                                <h2>Customers</h2>
-
+                                <a href="#">Customers</a>
                             </div>
                         </div>
                         <div class="categories_inventorys">
@@ -64,7 +67,8 @@
                                 <img src="../icons/files.png" alt="">
                             </div>
                             <div class="categories_inventorys_title">
-                                <h2>Inventory</h2>
+                                <a href="#">Inventory</a>
+                              
                             </div>
                         </div>
                         <div class="categories_conversations">
@@ -74,7 +78,9 @@
                                 <img src="../icons/conversation.svg" alt="">
                             </div>
                             <div class="categories_conversations_title">
-                                <h2>Conversations</h2>
+
+                                <a href="#">Conversations</a>
+                
                             </div>
                         </div>
                         <div class="categories_settings">
@@ -82,7 +88,8 @@
                                 <img src="../icons/settings.svg" alt="">
                             </div>
                             <div class="categories_settings_title">
-                                <h2>Setting</h2>
+                                <a href="#">Setting</a>
+                                
                             </div>
                         </div>
                     </div>
@@ -91,7 +98,8 @@
                             <img src="../icons/headphones.svg" alt="headphones srcset=">
                         </div>
                         <div class=" contact_title">
-                            <h2>Contact Support</h2>
+                            <a href="#">Contact Support</a>
+                            
                         </div>
                     </div>
                     <div class="gifts">
@@ -100,13 +108,21 @@
                         </div>
                         <div class="gifts_title">
                             <h2>Free Gift Awaits You!</h2>
-                            <p>Upgrade your account</p>
-                        </div>
-                        <span class="gifts_paragraph">
-                            <span>
-                                <img src="../icons/chevron-down.png" alt="" srcset="">
+                            <p>Upgrade your account
+                            <span class="gifts_paragraph">
+                                <span>
+                                    <img src="../icons/chevron-down.png" alt="" srcset="">
+                                </span>
                             </span>
-                        </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="logout">
+                        <div class="logout_image">
+                            <img src="../icons/logout.svg" alt="" srcset="">
+                            <span>Logout</span>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -255,13 +271,13 @@
                             </div>
                             <div class="main_body_content_middle_left_top_chart">
                                 <div class="main_body_content_middle_left_top_chart_info">
+                                    <div class="main_body_content_middle_left_top_chart_info_1">
+                                        <div class="main_body_content_middle_left_top_chart_info_1_2">
+                                            <div class="main_body_content_middle_left_top_chart_info_1_2_3"></div>
+                                        </div>
+                                    </div>
                                 </div>
-
                             </div>
-
-                        
-                           
-        
                         </div>
             
                         <div class="main_body_content_middle_middle_products">
@@ -438,30 +454,75 @@
                     </div>
 
                     <div class="main_body_content_bottom">
-                        <div class="main_body_content_upper_right_top">
-                            <div class="main_body_content_middle_left_top">
-                                <div class="main_body_content_middle_left_top_title">
-                                    <h2>Summary 
-                                        <span>Sales 
-                                        <span class="arrow_down_icon">
-                                            <i class="fa-solid fa-chevron-down"></i>
-                                        </span>
-                                    </span></h2>
-                                </div>
-                                <div class="main_body_content_middle_left_top_text">
-                                    <p>Last 7 Days</p>
+
+                    <div class="main_body_content_bottom_info">
+                        <div class="main_body_content_bottom_top">
+                            <div class="main_body_content_bottom_top_title">
+                                <h2>Summary 
+                                    <span>Sales 
                                     <span class="arrow_down_icon">
                                         <i class="fa-solid fa-chevron-down"></i>
                                     </span>
-                                </div>
+                                </span></h2>
+                            </div>
+                            <div class="main_body_content_middle_top_text">
+                                <p>Last 7 Days</p>
+                                <span class="arrow_down_icon">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
                             </div>
                         </div>
+                        <div class="main_body_content_bottom_left">
+                            <div class="main_body_content_bottom_left_scale">
+                                <ul class="main_body_content_bottom_left_scale_items">
+                                    <li class="main_body_content_bottom_left_scale_item">100k</li>
+                                    <li class="main_body_content_bottom_left_scale-item">80k</li>
+                                    <li class="main_body_content_bottom_left_scale-item">60k</li>
+                                    <li class="main_body_content_bottom_left_scale-item">40k</li>
+                                    <li class="main_body_content_bottom_left_scale-item">20k</li>
+
+                                </ul>
+                            </div>
+                            <div class="main_body_content_bottom_left_xscale">
+                                <ul class="main_body_content_bottom_left_xscale_items">
+                                    <li class="main_body_content_bottom_left_xscale_item">Sept 10</li>
+                                    <li class="main_body_content_bottom_left_xscale_item">Sept 11</li>
+                                    <li class="main_body_content_bottom_left_xscale_item">Sept 12</li>
+                                    <li class="main_body_content_bottom_left_xscale_item">Sept 13</li>
+                                    <li class="main_body_content_bottom_left_xscale_item">Sept 14</li>
+                                    <li class="main_body_content_bottom_left_xscale_item">Sept 15</li>
+                                    <li class="main_body_content_bottom_left_xscale_item">Sept 16x</li>
+                                </ul>
+
+                            </div>
+                            <div class="main_body_content_bottom_left_bar">
+
+                                <div class="main_body_content_bottom_left_bar_section">
+                                    <div class="main_body_content_bottom_left_bar_section_1"></div>
+
+                                </div>
+                                <div class="main_body_content_bottom_left_bar_section">
+                                    <div class="main_body_content_bottom_left_bar_section_2"></div>
+                                </div>
+                                <div class="main_body_content_bottom_left_bar_section">
+                                    <div class="main_body_content_bottom_left_bar_section_3"></div>
+                                </div>
+                                <div class="main_body_content_bottom_left_bar_section">
+                                    <div class="main_body_content_bottom_left_bar_section_4"></div>
+                                </div>
+                                <div class="main_body_content_bottom_left_bar_section">
+                                    <div class="main_body_content_bottom_left_bar_section_5"></div>
+                                </div>
+                                <div class="main_body_content_bottom_left_bar_section">
+                                    <div class="main_body_content_bottom_left_bar_section_6"></div>
+                                </div>
+                                <div class="main_body_content_bottom_left_bar_section">
+                                    <div class="main_body_content_bottom_left_bar_section_7"></div>
+                                </div>
+                                
+                            </div>
+                         </div>
                     </div>
-
-
-
-
-
                     
                     </div>
                 </div>
