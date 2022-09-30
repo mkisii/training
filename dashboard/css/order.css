@@ -24,7 +24,6 @@ body {
 .main_sidebar_content_navlist_bag {
   width: 50px;
   height: 50px;
-  background-color: #5570f1;
   align-items: center;
   object-fit: cover;
 }
@@ -316,21 +315,21 @@ body {
   padding-left: 10px;
 }
 .main_body_content_table_info .green {
-  color: green;
+  color: #6bab7e;
   border-radius: 10px;
-  background-color: lightgreen;
+  background-color: #deeee8;
   padding: 5px;
 }
 .main_body_content_table_info .blue {
-  color: blue;
+  color: #8296f5;
   border-radius: 10px;
-  background-color: lightblue;
+  background-color: #e4e8fd;
   padding: 5px;
 }
 .main_body_content_table_info .orange {
-  color: orange;
+  color: #8d8782;
   border-radius: 10px;
-  background-color: rgb(236, 197, 122);
+  background-color: #fff2e2;
   padding: 5px;
 }
 .main_body_content_table_info tfoot {
@@ -340,8 +339,9 @@ body {
 .main_body_content_table_info .pending,
 .main_body_content_table_info .in-progress {
   border-radius: 10px;
-  background-color: gray;
+  background-color: #f3f3f3;
   padding: 5px;
+  color: lightgray;
 }
 
 .main_body_content_footer {
