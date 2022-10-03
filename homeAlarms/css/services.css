@@ -387,4 +387,58 @@ body {
   color: white;
 }
 
-/*# sourceMappingURL=main.css.map */
+#service-landing {
+  background-color: gray;
+}
+#service-landing .services_landing {
+  height: 25vh;
+  display: flex;
+  align-items: flex-end;
+}
+#service-landing .services_landing_title {
+  width: 25%;
+  height: 12vh;
+}
+#service-landing .services_landing_title h1 {
+  padding-top: 1rem;
+  font-size: 42px;
+  font-weight: 700;
+  color: #ffffff;
+}
+#service-landing .services_landing_title p {
+  margin-top: -2rem;
+  font-size: 24px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.condition_systems {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+}
+.condition_systems_image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.condition_systems_services {
+  background-color: #f9f9f9;
+}
+.condition_systems_services_lists_items {
+  list-style-type: none;
+  padding: 20px;
+}
+.condition_systems_services_lists_items li {
+  padding: 15px 25px;
+  background-color: white;
+  border: 4px solid rgb(21, 13, 13);
+}
+.condition_systems_services_lists_items li > a {
+  color: #0066ce;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=services.css.map */
