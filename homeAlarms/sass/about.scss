@@ -1,0 +1,325 @@
+@import 'main.scss';
+@import 'services.scss';
+@import 'quotation.scss';
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Varela+Round&display=swap');
+
+
+#about-security{
+    background-color: white;
+.about_security{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 551px;
+    border-bottom: 1px dotted gray;
+    // background-color: red;
+    &_image{
+        margin-top: 20px;
+        width: 720px;
+        height: 375px;
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &_title{
+        width: 720px;
+        height: 88px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1{
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 33px;
+            color: #333333;
+            margin-bottom: -1rem;
+        }
+        p{
+            font-size: 21px;
+            font-weight: 300;
+            color: #555555;
+            line-height: 29px;
+        }
+    }
+
+}
+
+}
+
+
+#company-about{
+    background-color: white;
+    .company_about{
+        // margin-top: 2rem;
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        gap: 20px;
+        border-bottom: 1px dotted gray;
+        background-color: white;
+        &_mission{
+            
+            width: 480px;
+            height: 820px;
+        }
+        &_offer{
+         
+            width: 100%;
+            // height: 820px;
+            margin-top: 2rem;
+            background-color: white;
+            margin-block-start: 20px;
+      
+            &_services,
+            &_prices,
+            &_support,
+            &_warranty{
+                margin-bottom: 2rem;
+              
+    
+                &_lists{
+                    display: flex;
+                    flex-direction: row;
+                    background-color: #f3f3f3;
+                    padding: 10px;
+                    &_log{
+                        margin-left: 1.5rem;
+                        p{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-top: 1rem;
+                            width: 45px;
+                            height: 45px;
+                            border-radius: 50px;
+                            border: 2px solid red;
+                            i{
+                                font-size: 16px;
+                                color:#ff3333;
+                            }
+                            
+                        }
+                    }
+                    &_title{
+                        margin-left: 1rem;
+                        h2{
+                            margin-bottom: 1rem;
+                            font-size: 18px;
+                            font-weight: 400;
+                            font-family: Poppins,Arial, sans-serif;
+                            color: #362f2d;
+                            
+    
+                        }
+                    }
+                }
+    
+            }
+            &_prices,
+            &_support,
+            &_warranty{
+                margin-top: 20px;
+            }
+    
+    
+    
+        }
+    
+    }
+    
+
+}
+
+#proffessional-team{
+    background-color: white;
+    margin-bottom: 3rem;
+   
+    .proffessional_team{    
+        &_title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            h1{
+                margin-bottom: -1rem;
+                font-size: 30px;
+                font-weight: 500;
+            }
+            p{
+                font-size: 21px;
+                font-weight: 300;
+            }
+    
+        }
+        &_profile{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            &_image{
+                
+                display: flex;
+                align-items:center ;
+                justify-content: center;
+                position: relative;
+    
+    
+                &_overlay{
+
+                    top: 0;
+                    left: 0;
+                    background-color: black;
+                    opacity: .5;
+                    z-index: 0;
+    
+                }
+                img{
+                    width: 100%;
+                    width:100%;
+                    object-fit: cover;
+                }
+                img:hover + &_media{
+                    visibility: visible;
+                    transition: 10s ease;
+                    transition-delay: 30ms;
+    
+    
+                }
+    
+              
+                &_media{
+
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: -1rem;
+                    position: absolute;
+                    visibility: hidden;
+                    z-index: 1;
+                    color: white;
+                    
+                    &_items{
+                        list-style-type: none;
+                        display: flex;
+                        li{
+                            padding: 20px;
+                            a{
+                                i{
+                                    text-decoration: none;
+                                    color: white;
+    
+                                }
+                            }
+                           
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
+
+}
+
+
+#client-say{
+    background-image: url(../assents/img/bg_parallax.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height:450px;
+    // border: 3px solid black;
+
+
+    
+    .client_say {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        // background-color: red;
+
+        &_title{
+            display: flex;
+            justify-content: center;
+            // background-color: red;
+            text-align: center;
+            flex-direction: column;
+
+            &_head{
+                h1{
+                    font-size: 48px;
+                    font-weight: 300;
+                    font-family: poppins, Arial, sans-serif;
+                    margin-bottom: -2rem;
+                }
+                p{
+                    font-size: 24px;
+                    font-weight: 300;
+                }
+
+            }
+      
+            &_text{
+                background-color: black;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &_profile{
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    
+                    &_image{
+                        height: 80px;
+                        width: 80px;
+                        margin: 1rem 0 1rem 1rem;
+                        img{
+         
+                            border-radius: 50px;
+                            object-fit: fit;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    &_name{
+                        color: white;
+                        margin-left: 1rem;
+                        h2{
+                            font-size: 14px;
+                            font-weight: 500;
+                            margin-bottom: -1rem;
+                            color: #ffffff;
+                            text-align: left;
+                        }
+                        p{
+                            font-size: 11px;
+                            font-weight: 400;
+                        }
+
+                    }                
+        
+                }
+
+                &_mess{
+                    color: white;
+                    margin: 0 2rem 0 2rem;
+                    p{
+                        font-size: 16px;
+                        font-weight: 400;
+                        font-style: italic;
+                        color: #ffffff;
+                        text-align: left;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+   
+}

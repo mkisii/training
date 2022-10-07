@@ -1,0 +1,255 @@
+@import 'main.scss';
+@import 'services.scss';
+
+#quotation-landing{
+    background-image: url(../assents/img/subheader_in_3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .quotation_landing{
+        height: 350px;
+        display: flex;
+        align-items: flex-end;
+        &_title{
+            // background-color: blue
+            h1{
+                margin-bottom: -1.5rem;
+                font-size: 42px;
+                font-weight: 700;
+                color: white;
+                text-transform: uppercase;
+            }
+            p{
+                font-size: 24px;
+                font-weight: 300;
+                color: white;
+            }
+        }
+    }
+}
+#quotation-info{
+    .quotation_info{
+
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-gap: 25px;
+
+
+        &_inputField{
+            form {
+                // border-left: 1px dotted gray;
+                // margin-left: 6rem;
+                // background-color: red;
+
+            }
+           
+            &_personal,
+            &_info,
+            &_need,
+            &_button,
+            &_address,
+            &_diagnose{
+                margin: 3rem auto;
+
+
+
+
+                &_input   
+                {
+                    display: grid;
+                    grid-template-columns: 2fr 2fr;
+                    grid-gap: 20px;
+                    padding-left: 1.5rem;
+                    // margin-left: 5rem;
+                    border-left: 1px dotted gray;
+                    // background-color: red;
+
+                   
+                  
+
+
+
+
+                   
+                    &_fname,
+                    &_lname,
+                    &_email,
+                    &_telephone,
+                    &_date,
+                    &_time{
+    
+                        display:  flex;
+                        justify-content: space-between;
+                        align-items: left;
+                        flex-direction: column;
+                        // background-color: black;
+                        margin-left: 5rem;
+                        input,select{
+                            padding: 10px;
+                            
+                        }
+
+
+                        
+                        
+                    }
+                }
+                &_title{
+                    display: flex;
+                    align-items: flex-start;
+
+                    &_info{
+
+                        padding-left: 20px;
+                        margin-left: 10px;
+                        
+                        &_input{
+                            background-color: red;
+                            margin-left: 5rem;
+                        }
+                        
+                    }
+
+                    &_log{
+                        margin-top: 10px;
+                        padding: 10px;
+                        background-color: red;
+                        width: 50px;
+                        height: 50px;
+                        align-items: center;
+                        border-radius: 50px;
+                        i{
+                            align-items:center ;
+                            color: white;
+                            padding: 15px;
+                            font-size: 25px;
+                        }
+                    }
+
+                    h2{
+                        font-size: 22px;
+                        font-weight: 500px;
+                        color: #333333;
+                        margin-bottom: -1rem;
+                       
+                        
+                    }
+                }
+            }
+            &_address{   
+                
+               &_input{
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                // background-color: red;
+                margin-left: 5rem;
+               
+
+                &_city{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: left;
+                    flex-direction: column;
+                    
+                    input{
+
+                        width: 46%;
+                        padding: 10px;
+                    }
+                }
+         
+
+                &_street{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 20px;
+                    align-items: center;
+
+                    &_lstreet,
+                    &_code_state,
+                    &_code_postal{
+                        display:  flex;
+                        justify-content: space-around;
+                        align-items: left;
+                        flex-direction: column;
+                        input{
+                            padding: 10px;
+                        }
+                    }
+                    &_code{
+
+                        display:  flex;
+                        justify-content: space-between;
+                        align-items: left;
+                        flex-direction: row;
+
+
+                    }
+                }
+               }
+            }
+
+
+            &_need{
+                &_input{
+
+                    textarea{
+                        width: 203.5%;
+
+                    }
+                }
+
+            }
+
+            &_button{            
+                button{
+                    margin-left: 6.5rem;
+                    padding: 10px 25px;
+                    background-color: #0066cc;
+                    border-radius: 5px;
+                    color: white;
+                    text-transform: uppercase;
+                }
+
+            }
+
+
+        }
+
+        &_help{
+            margin-top: 3rem;
+            height: 90vh;
+            border: 1px dotted gray;
+            padding-left: 20px;
+            h1{
+                font-size: 18px;
+                font-weight: 500;
+                color: #333333;
+            }
+            &_phone,
+            &_email{
+                // background-color: red;
+                font-size: 14px;
+                font-weight: 600;
+                color: #555555;
+                h1{
+                    font-size: 21px;
+                    font-weight: 500;
+                    color: #333333;
+                }
+                h2{
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #0f72d7;
+
+                }
+                h2:hover{
+                    color: #333333;
+                }
+            }
+        }
+
+    }
+}
