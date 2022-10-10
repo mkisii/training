@@ -62,12 +62,7 @@ body {
 .main_header_nav_logo {
   margin-top: 20px;
 }
-.main_header_nav_logo_image {
-  width: 350px;
-  height: 50px;
-}
 .main_header_nav_logo_image img {
-  object-fit: fill;
   width: 100%;
   height: 100%;
 }

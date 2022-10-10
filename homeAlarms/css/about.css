@@ -66,12 +66,7 @@ body {
 .main_header_nav_logo {
   margin-top: 20px;
 }
-.main_header_nav_logo_image {
-  width: 350px;
-  height: 50px;
-}
 .main_header_nav_logo_image img {
-  object-fit: fill;
   width: 100%;
   height: 100%;
 }
@@ -465,12 +460,7 @@ body {
 .main_header_nav_logo {
   margin-top: 20px;
 }
-.main_header_nav_logo_image {
-  width: 350px;
-  height: 50px;
-}
 .main_header_nav_logo_image img {
-  object-fit: fill;
   width: 100%;
   height: 100%;
 }
@@ -1080,12 +1070,7 @@ body {
 .main_header_nav_logo {
   margin-top: 20px;
 }
-.main_header_nav_logo_image {
-  width: 350px;
-  height: 50px;
-}
 .main_header_nav_logo_image img {
-  object-fit: fill;
   width: 100%;
   height: 100%;
 }
@@ -1479,12 +1464,7 @@ body {
 .main_header_nav_logo {
   margin-top: 20px;
 }
-.main_header_nav_logo_image {
-  width: 350px;
-  height: 50px;
-}
 .main_header_nav_logo_image img {
-  object-fit: fill;
   width: 100%;
   height: 100%;
 }
@@ -2086,7 +2066,6 @@ caption {
 }
 #quotation-info .quotation_info_inputField_personal_title_info, #quotation-info .quotation_info_inputField_info_title_info, #quotation-info .quotation_info_inputField_need_title_info, #quotation-info .quotation_info_inputField_button_title_info, #quotation-info .quotation_info_inputField_address_title_info, #quotation-info .quotation_info_inputField_diagnose_title_info {
   padding-left: 20px;
-  margin-left: 10px;
 }
 #quotation-info .quotation_info_inputField_personal_title_info_input, #quotation-info .quotation_info_inputField_info_title_info_input, #quotation-info .quotation_info_inputField_need_title_info_input, #quotation-info .quotation_info_inputField_button_title_info_input, #quotation-info .quotation_info_inputField_address_title_info_input, #quotation-info .quotation_info_inputField_diagnose_title_info_input {
   background-color: red;
@@ -2126,7 +2105,7 @@ caption {
   flex-direction: column;
 }
 #quotation-info .quotation_info_inputField_address_input_city input {
-  width: 46%;
+  background-color: red;
   padding: 10px;
 }
 #quotation-info .quotation_info_inputField_address_input_street {

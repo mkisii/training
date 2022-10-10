@@ -50,27 +50,13 @@
             &_address,
             &_diagnose{
                 margin: 3rem auto;
-
-
-
-
                 &_input   
                 {
                     display: grid;
                     grid-template-columns: 2fr 2fr;
                     grid-gap: 20px;
                     padding-left: 1.5rem;
-                    // margin-left: 5rem;
                     border-left: 1px dotted gray;
-                    // background-color: red;
-
-                   
-                  
-
-
-
-
-                   
                     &_fname,
                     &_lname,
                     &_email,
@@ -97,12 +83,8 @@
                 &_title{
                     display: flex;
                     align-items: flex-start;
-
                     &_info{
-
-                        padding-left: 20px;
-                        margin-left: 10px;
-                        
+                        padding-left: 20px;                  
                         &_input{
                             background-color: red;
                             margin-left: 5rem;
@@ -118,6 +100,7 @@
                         height: 50px;
                         align-items: center;
                         border-radius: 50px;
+                        
                         i{
                             align-items:center ;
                             color: white;
@@ -155,7 +138,8 @@
                     
                     input{
 
-                        width: 46%;
+                        // width: 46%;
+                        background-color: red;
                         padding: 10px;
                     }
                 }
