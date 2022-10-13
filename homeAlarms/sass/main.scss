@@ -5,19 +5,19 @@ $black:#171716;
 $text-color:#ffffff;
 $button-color:#ff3333;
 
-body{
+body {
     padding: 0;
     margin: 0;
     font-family:Poppins, Arial, sans-serif ;
-    box-sizing: border-box;
     // background-attachment: fixed;
+    box-sizing: border-box;
     
 
 }
 .container{
     width: 80%;
 	margin: 0  auto;
-    // background-color: red;
+    // background-color: red; 
     
 }
 .main_header_contact{
@@ -79,12 +79,9 @@ body{
         margin-top: 20px;
 
         &_image{
-
-            // width: 350px;
-            // height: 50px;
-        
+    
             img{
-                // object-fit: fill;
+
                 width: 100%;
                 height: 100%;
                 
@@ -248,7 +245,7 @@ body{
 
                     width: 45px;
                     height: 45px;
-                    padding: 1rem;
+                    
 
                 }
                 
@@ -435,7 +432,7 @@ body{
     bottom: 0;
     
     .main_footer{
-        border-bottom: 2px dotted white;
+        border-bottom: 0.5px dotted rgb(57, 53, 53);
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 20px;
@@ -449,7 +446,7 @@ body{
                 font-weight: 400;
                 font-size: 14px;
                 color: white;
-                width: 50%;
+        
             }
         }
         &_middle{
@@ -484,6 +481,7 @@ body{
                 padding-right: 2rem;
             }
             h2{
+                display: flex;
                 text-align: start;
                 font-size: 14px;
                 font-weight: 400;
@@ -496,10 +494,8 @@ body{
     }
     .footer_icon{
         display: flex;
-        // align-items: center;
         justify-content: space-around;
-        // background-color: red;
-
+        
         &_items{
             width: 300px;
             display: flex;

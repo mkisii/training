@@ -5,7 +5,8 @@
 
 
 #about-security{
-    background-color: white;
+    // background-color: white;
+
 .about_security{
     display: flex;
     align-items: center;
@@ -145,10 +146,12 @@
                 margin-bottom: -1rem;
                 font-size: 30px;
                 font-weight: 500;
+                align-items: center;
             }
             p{
                 font-size: 21px;
                 font-weight: 300;
+                text-align: center;
             }
     
         }
@@ -156,48 +159,43 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 10px;
+            position: relative;
             &_image{
                 
                 display: flex;
                 align-items:center ;
                 justify-content: center;
                 position: relative;
-    
-    
-                &_overlay{
-
-                    top: 0;
-                    left: 0;
-                    background-color: black;
-                    opacity: .5;
-                    z-index: 0;
-    
-                }
+                
+                
                 img{
                     width: 100%;
                     width:100%;
                     object-fit: cover;
+                    cursor: pointer;
                 }
-                img:hover + &_media{
+                &:hover > div{
                     visibility: visible;
-                    transition: 10s ease;
-                    transition-delay: 30ms;
+
     
     
                 }
-    
+
               
                 &_media{
 
                     align-items: center;
+                    justify-content: center;
                     display: flex;
                     flex-direction: column;
-                    margin-bottom: -1rem;
                     position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
                     visibility: hidden;
-                    z-index: 1;
-                    color: white;
-                    
+                    color: white;     
+                    background-color: #111111dd;               
                     &_items{
                         list-style-type: none;
                         display: flex;
@@ -213,7 +211,21 @@
                            
                         }
                     }
+                    // .overlay{
+                    //     top: 0;
+                    //     left: 0;
+                    //     right: 0;
+                    //     bottom: 0;
+                    //     opacity: 0;
+                    //     transition:opacity 0.4s ease-in-out;
+                    //     background-color: #111111;
+                    //     cursor: pointer;
+                    //     position: absolute;
+                    //     // z-index: 1;
+                    // }
+        
                 }
+
             }
         }
     
@@ -223,26 +235,31 @@
 
 
 #client-say{
-    background-image: url(../assents/img/bg_parallax.jpg);
+    width: 100%;
+    height:50vh;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;
-    height:450px;
-    // border: 3px solid black;
-
-
+    background-attachment: fixed;
+    background-image: url(../assents/img/bg_parallax.jpg);
     
     .client_say {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        // background-color: red;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #11111188;
+        width: 100%;
+        height: 100%;
+        
+        
+ 
 
         &_title{
             display: flex;
             justify-content: center;
-            // background-color: red;
             text-align: center;
             flex-direction: column;
 
@@ -252,10 +269,12 @@
                     font-weight: 300;
                     font-family: poppins, Arial, sans-serif;
                     margin-bottom: -2rem;
+                    color: white;
                 }
                 p{
                     font-size: 24px;
                     font-weight: 300;
+                    color: #ffffff;
                 }
 
             }

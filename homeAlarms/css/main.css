@@ -23,7 +23,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-inline-start: 10px;
+  -webkit-margin-start: 10px;
+          margin-inline-start: 10px;
 }
 .main_header_contact h2 {
   color: red;
@@ -183,7 +184,6 @@ body {
 #company_section .company_info_items_protection_logo img, #company_section .company_info_items_video_logo img, #company_section .company_info_items_support_logo img, #company_section .company_info_items_manage_logo img, #company_section .company_info_items_microphone_logo img, #company_section .company_info_items_certifications_logo img {
   width: 45px;
   height: 45px;
-  padding: 1rem;
 }
 #company_section .company_info_items_protection_title, #company_section .company_info_items_video_title, #company_section .company_info_items_support_title, #company_section .company_info_items_manage_title, #company_section .company_info_items_microphone_title, #company_section .company_info_items_certifications_title {
   padding: 1rem;
@@ -220,7 +220,8 @@ body {
   border-bottom: 5px solid red;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #company_services .company_services_installation_image > img:hover, #company_services .company_services_security_image > img:hover, #company_services .company_services_check_image > img:hover {
   transform: scale(1.1);
@@ -270,6 +271,7 @@ body {
   background-repeat: no-repeat;
   width: 100%;
   height: 450px;
+  position: -webkit-sticky;
   position: sticky;
 }
 #company_demo .company_demo {
@@ -320,7 +322,7 @@ body {
   bottom: 0;
 }
 #footer .main_footer {
-  border-bottom: 2px dotted white;
+  border-bottom: 0.5px dotted rgb(57, 53, 53);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
@@ -332,7 +334,6 @@ body {
   font-weight: 400;
   font-size: 14px;
   color: white;
-  width: 50%;
 }
 #footer .main_footer_middle {
   margin-top: 2rem;
@@ -361,6 +362,7 @@ body {
   padding-right: 2rem;
 }
 #footer .main_footer_right h2 {
+  display: flex;
   text-align: start;
   font-size: 14px;
   font-weight: 400;
@@ -391,6 +393,4 @@ body {
   font-size: 18px;
   font-weight: 400;
   color: white;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

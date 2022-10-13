@@ -9,9 +9,6 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    // width: 100%;
-
-
     .services_landing{
         height: 350px;
         display: flex;
@@ -19,16 +16,12 @@ body{
         
         &_title{
            width: 45%;
-        //    height: 12vh;
-            
-
             h1{
 
                 padding-top: 1rem;
                 font-size: 42px;
                 font-weight: 700;
                 color: #ffffff;
-             
             }
             p{
                 margin-top: -2rem;
@@ -52,99 +45,92 @@ body{
             object-fit: cover;
             width: 100%;
             height: 20%;
+            border-bottom: 5px solid red;
+
         }
 
-    }
-    &_title{
-        h2{
-            font-size: 22px;
-            font-weight: 500;
-            color: #333333;
-        }
-        p{
-            font-size: 14px;
-            font-weight: 400;
-            color: #555555;
-            line-height: 21px;
-        }
-    }
-    &_services{
-        background-color: #f9f9f9;
-         &_lists{
-            &_items{
-                margin-left: -20px;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                list-style-type:none;
-              
-                li{
-                    width: 100%;
-                    background-color:white;
-                    border: 4px solid #f7f7f7;
-                    padding: 10px;
-
-                }
-                li>a{
-                    
-                  
-                    color: #0066ce;
-                    font-size: 14px;
-                    font-weight: 500;
-                    text-decoration: none;
-                }
-                li>a>span{
-
-                
-                }
-
-            }
-            
-        }
-        &_contact{
-         
-            margin-left: 20px;
-            width: 100%;
-            text-align: left;
-            // background-color: red;
-
-
+        &_title{
             h2{
-                font-size: 14px;
+                font-size: 22px;
                 font-weight: 500;
-                color:#333333;
-
+                color: #333333;
 
             }
             p{
                 font-size: 14px;
                 font-weight: 400;
+                color: #555555;
+                line-height: 21px;
+            }
+        }
+    }
+    &_services{
+         &_lists{
+            // width: 100%;
+
+            &_items{
+                padding: 0;
+                list-style-type:none;
+                
+                li{
+                    display: flex;
+                    justify-content: space-between;
+                    background-color:white;
+                    border: 4px solid #f7f7f7;
+                    padding: 10px;
+                    a{            
+                        color: #0066ce;
+                        font-size: 14px;
+                        font-weight: 500;
+                        text-decoration: none;
+                    }
+
+                }
+                span{
+                    align-items: right;
+                    i{
+                        color: #0066ce;
+                    }
+                }
+
+            }
+            h2{
+                font-size: 14px;
+                font-weight: 500;
                 color: #333333;
+            }
+            p{
+                font-size: 14px;
+                font-weight: 400;
+                color: #555555;
+
             }
             a{
                 text-decoration: none;
-                color: #0066ce
+                color: #0066ce;
             }
-
-
+            a:hover{
+                color: #111111;
+            }
         }
-        &_quotation{
-            margin-left: 20px;
-            margin-top: 6rem;
-            // height: 35px;
-            
-            &_button{
-                width: 100%;
-                padding: 15px;
-                background-color:#362f2d;
 
+        &_quotation{
+
+            &_button{
+                background-color:black;
+                padding: 15px;
+                margin-top:6rem;
+                
                 a{
-                    width: 100%;
+                
                     color: white;
                     text-decoration: none;
                     text-transform: uppercase;
-                    text-align: left;
+                    text-align: center;
+                    margin-left: 2rem;
+                    span{
+                        margin-right: 1rem;
+                    }
      
                 }
    
@@ -153,142 +139,150 @@ body{
         }
     }
 }
+
 .system_installations{
+    display: grid;
+    grid-template-columns:3fr 1fr;
+    grid-gap: 25px;
     
     &_services{
+        border-bottom: 0.5px dotted rgba(245, 240, 240, 0.982) ;
+        margin-bottom:1rem;
+
         display: grid;
-        grid-template-columns:80% 20%;
-        grid-gap: 20px;
-
-        &_left{
-
-           width: 92%;
-           
-           //    background-color: red;
-           &_upper{
-                border-bottom: 2px dotted #141010;
-                display: grid;
-                grid-template-columns: 2fr 2fr;
-                grid-gap: 20px;
-                margin-bottom: 3rem;
-
-                &_1,
-                &_2{
+        grid-template-columns:1fr 1fr;
+        gap: 30px;
         
-                    &_image{
-                        width: 100%;
-                        height: 20vh;
-                        img{
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
-                    }
-                    &_title{
-                        margin-bottom: 5rem;
-
-                        h2{
-                            size: 22px;
-                            font-weight: 500;
-                            color: #333333;
-                        }
-                        p{
-                            font-size: 14px;
-                            font-weight: 400;
-                            color: #555555;
-                        }
-                    }
-        
-                }
-
-            }
-
-
-        }
+        &_left,
         &_right{
-            width: 100%;
-           margin-left: -5rem;
 
-            &_3{
-
-                &_security-tips{
-                    margin-top: -2rem;
-                    border: 2px dotted gray;
-                    background-color: #e2e2e2;
-                    width:120%;
-                    // background-color: red;
-
-                    &_lists{
-                        li{
-
-                            padding: 5px;
-                        }
-                        
-                    }
-                    a{
-                        text-decoration: none;
-                        color: #0066ce;
-                        padding-left: 20px;
-                    }
-        
-
-                }
-            }  
-
-        }
-
-
-          
-    }
-
-
-
-}
-.system_installations_services_left_bottom{
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    gap: 20px;
-
-    &_response,
-    &_help,
-    &_diagnose,
-    &_transport{
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        // background-color: red;
-      
-        &_image{
-           
-            margin-right: 20px;
-           
-            width: 60%;
             
-            img{
+            &_image{  
+                h2{
+                    font-size: 22px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    color: #333333;
+                  
+                }
+                p{
+                    margin-bottom: 2rem;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 21px;   
+                    color: #555555;
+                }          
+                img{
+                border-bottom: 5px solid red;
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
             }
-         
+
+           }
         }
-        &_title{
-        
-          
+    }
+    &_security{
+        margin-top: -2rem;
+        border: 0.5px dotted gray;
+        &_tips{
             h2{
-                
                 font-size: 18px;
                 font-weight: 500;
+                color: #333333;
+                line-height: 20px;
+                margin-left: 1.5rem;
+                span{
+                    margin-right: 1rem;
+                }
+            }
+            &_lists{
+                li{
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 21px;
+                    padding: 10px; 
+                }
+            }
+            p{
+                a{
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #0066ce;
+                    margin-left: 2rem;
+                    text-decoration: none;
+                 
+                }
+                a:hover{
+                    color: #111111;
+                }
             }
         }
     }
- 
-  
 }
-.table_content{
-    
+.other_service{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+
+    .other_services{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        
+            &_left,
+            &_right{
+        
+                &_response,
+                &_help,
+                &_diagnose,
+                &_transport{
+                 display: flex;
+                 align-items: left;
+                 justify-content: flex-start;
+             
+                 &_image{
+                     width: 60px;
+                     height: 60px;
+                     margin-right: 1rem;
+                     display: flex;
+                     align-items: center;
+                    //  background-color: red;
+                     margin-top: 1.3rem;
+                     img{
+                         width: 100%;
+                         height: 100%;
+                     }
+                     
+                 }
+                 &_title{
+                     h2{
+             
+                         font-size: 18px;
+                         font-weight: 500;
+                         color: #333333;
+                     }
+                     p{
+                         word-wrap: break-word;
+                         text-align: left;
+                         font-size: 14px;
+                         font-weight: 400;
+                         color: #555555;
+             
+                     }
+                    
+                 }
+                }
+            }
+
+    }
+
+
+
 }
+           
 table{
-    width: 120%;
+    width: 80%;
   
     // background-color: #0066ce;
     margin-bottom: 2rem;

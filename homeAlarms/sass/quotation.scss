@@ -1,5 +1,8 @@
 @import 'main.scss';
 @import 'services.scss';
+// body{
+//     background-color: black;
+// }
 
 #quotation-landing{
     background-image: url(../assents/img/subheader_in_3.jpg);
@@ -10,8 +13,15 @@
         height: 350px;
         display: flex;
         align-items: flex-end;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #11111188;
+        // width: 100%;
+        // height: 100%;
         &_title{
             // background-color: blue
+
             h1{
                 margin-bottom: -1.5rem;
                 font-size: 42px;
@@ -36,27 +46,21 @@
 
 
         &_inputField{
-            form {
-                // border-left: 1px dotted gray;
-                // margin-left: 6rem;
-                // background-color: red;
-
-            }
-           
+            
             &_personal,
-            &_info,
+            &_info,            
             &_need,
             &_button,
             &_address,
             &_diagnose{
+                border-left: 1px dotted gray;
                 margin: 3rem auto;
-                &_input   
-                {
+                &_input{
+
                     display: grid;
                     grid-template-columns: 2fr 2fr;
                     grid-gap: 20px;
                     padding-left: 1.5rem;
-                    border-left: 1px dotted gray;
                     &_fname,
                     &_lname,
                     &_email,
@@ -68,44 +72,55 @@
                         justify-content: space-between;
                         align-items: left;
                         flex-direction: column;
-                        // background-color: black;
-                        margin-left: 5rem;
+                     
+                        
+                        margin-left: 1rem;
                         input,select{
                             padding: 10px;
                             
                         }
+                        input:focus, select:focus{
+                            border: 1px solid #1670BE;
+                            box-shadow: 0 0 3px #1670BE;
+                            outline-offset: 0px;
+                            outline: none;
+                        }
 
 
                         
                         
                     }
+
                 }
                 &_title{
                     display: flex;
-                    align-items: flex-start;
+                    align-items: center;
+                   
+
+
                     &_info{
                         padding-left: 20px;                  
-                        &_input{
-                            background-color: red;
-                            margin-left: 5rem;
-                        }
+
                         
                     }
 
                     &_log{
-                        margin-top: 10px;
-                        padding: 10px;
+                        
+                        margin-left: -3rem;
                         background-color: red;
                         width: 50px;
                         height: 50px;
                         align-items: center;
                         border-radius: 50px;
+                        padding: 15px;
                         
                         i{
                             align-items:center ;
                             color: white;
-                            padding: 15px;
+                            padding: 10px;
                             font-size: 25px;
+                            padding: 18px;
+                            margin: -6px auto;
                         }
                     }
 
@@ -118,6 +133,202 @@
                         
                     }
                 }
+                &_toggle{
+                    display: flex;
+                    flex-direction: column;  
+                    padding-left: 3.5rem;
+                    &_upper{
+
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: baseline;
+                  
+
+
+                        &_insure,
+                        &_client{
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+                            background-color: white;
+                            h2{
+                                font-size: 14px;
+                                font-weight: 600;
+                                color: #555555;
+                                text-align: start;
+                                // background-color: red;
+                                margin-right: 3.5rem;
+                            }
+                            .switch{
+                                // align-self: start;
+                                width: max-content;
+
+                                input{
+                                    display: none;
+                                }
+
+                                input:checked ~ span{
+                                    background-color: #7dca97;
+                                    padding-left: 15px;
+                                    padding-right: 0;
+                                    border-color: #7dca97;
+
+                                    &::before {
+                                        left: calc(100% - 21px);
+                                        box-shadow: -2px 1px 5px #5c6d7e;
+                                    }
+
+                                    &::after {
+                                        content: "Yes";
+                                        justify-content: start;
+                                        color: #ffffff;
+                                    }
+                                }
+                                
+                                .slider{
+                                    display: block;
+                                    width: 70px;
+                                    height: 22px;
+                                    border-radius: 22px;
+                                    position: relative;
+                                    border: 1px solid #d7d7d7;
+                                    background-color: transparent;
+                                    padding-right: 15px;
+                                    box-sizing: border-box;
+                                    
+                                    &::after {
+                                        content: 'No';
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: end;
+                                        width: 100%;
+                                        height: 100%;
+                                        padding-right: 2px;
+                                        font-size: 13px;
+                                        font-weight: 500;
+                                        transition: all 300ms;
+                                    }
+                                    
+                                    &::before {
+                                        content: "";
+                                        position: absolute;
+                                        top: -1px;
+                                        left: -1px;
+                                        display: block;
+                                        width: 22px;
+                                        height: 22px;
+                                        box-sizing: border-box;
+                                        border: 1px solid #d7d7d7;
+                                        background-color: #ffffff;
+                                        border-radius: 50%;
+                                        transition: left 300ms ease-in;
+                                        box-shadow: 2px 1px 3px #d7d7d7;
+                                    }
+                                }
+                            }
+                        }
+                        &_insure{
+                            .switch{
+                                margin-left: 6rem;
+                            }
+                        }
+                        &_client{
+                            h2{
+                                text-align: left;
+                                margin-right: 9rem;
+
+
+                            }
+                        }
+
+
+                    }
+                    &_bottom{
+                        &_urgent{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            width: 46%;
+                            h2{
+                                font-size: 14px;
+                                font-weight: 600;
+                                color: #555555;
+                            }
+                            .switcher{
+                                width: max-content;
+
+                                input{
+                                    display: none;
+                                }
+
+
+                                input:checked ~ span{
+                                    background-color: #7dca97;
+                                    padding-left: 15px;
+                                    padding-right: 0;
+                                    border-color: #7dca97;
+
+                                    &::before {
+                                        left: calc(100% - 21px);
+                                        box-shadow: -2px 1px 5px #5c6d7e;
+                                    }
+
+                                    &::after {
+                                        content: "Yes";
+                                        justify-content: start;
+                                        color: #ffffff;
+                                    }
+                                }
+                                
+                                .slider2{
+                                    display: block;
+                                    width: 70px;
+                                    height: 22px;
+                                    border-radius: 22px;
+                                    position: relative;
+                                    border: 1px solid #d7d7d7;
+                                    background-color: transparent;
+                                    padding-right: 15px;
+                                    box-sizing: border-box;
+                                    
+                                    &::after {
+                                        content: 'No';
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: end;
+                                        width: 100%;
+                                        height: 100%;
+                                        padding-right: 2px;
+                                        font-size: 13px;
+                                        font-weight: 500;
+                                        transition: all 300ms;
+                                    }
+                                    
+                                    &::before {
+                                        content: "";
+                                        position: absolute;
+                                        top: -1px;
+                                        left: -1px;
+                                        display: block;
+                                        width: 22px;
+                                        height: 22px;
+                                        box-sizing: border-box;
+                                        border: 1px solid #d7d7d7;
+                                        background-color: #ffffff;
+                                        border-radius: 50%;
+                                        transition: left 300ms ease-in;
+                                        box-shadow: 2px 1px 3px #d7d7d7;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
+
+                }
             }
             &_address{   
                 
@@ -126,85 +337,96 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                // background-color: red;
-                margin-left: 5rem;
+                margin-left: 1rem;
                
 
-                &_city{
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: left;
-                    flex-direction: column;
-                    
-                    input{
-
-                        // width: 46%;
-                        background-color: red;
-                        padding: 10px;
-                    }
-                }
-         
-
-                &_street{
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    grid-gap: 20px;
-                    align-items: center;
-
-                    &_lstreet,
-                    &_code_state,
-                    &_code_postal{
-                        display:  flex;
-                        justify-content: space-around;
-                        align-items: left;
-                        flex-direction: column;
-                        input{
-                            padding: 10px;
-                        }
-                    }
-                    &_code{
-
-                        display:  flex;
+                    &_city{
+                        display: flex;
                         justify-content: space-between;
                         align-items: left;
-                        flex-direction: row;
+                        flex-direction: column;
+                        
+                        input{
 
+                            width: 48.5%;
+                            padding: 10px;
+                        }
+                        input:focus{
+                            border: 1px solid #1670BE;
+                            box-shadow: 0 0 3px #1670BE;
+                            outline-offset: 0px;
+                            outline: none;
+                        }
+                    }
+                    &_street{
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-gap: 20px;
+                        align-items: center;
 
+                        &_lstreet,
+                        &_code_state,
+                        &_code_postal{
+                            display:  flex;
+                            justify-content: space-around;
+                            align-items: left;
+                            flex-direction: column;
+                            input{
+                                padding: 10px;
+                            }
+                            input:focus{
+                                border: 1px solid #1670BE;
+                                box-shadow: 0 0 3px #1670BE;
+                                outline-offset: 0px;
+                                outline: none;
+                            }
+                        }
+                        &_code{
+
+                            display:  flex;
+                            justify-content: space-between;
+                            align-items: left;
+                            flex-direction: row;
+                        }
                     }
                 }
-               }
             }
-
-
+            
             &_need{
-                &_input{
+                width: 100%;
+                
+                textarea{
+                    border:1px solid #999999;
+                    width:100%;
+                    margin:5px 0;
+                    padding:3px;
+                    margin-left:2rem ;
 
-                    textarea{
-                        width: 203.5%;
-
+                }
+                textarea:focus{
+                    border: 1px solid #1670BE;
+                    box-shadow: 0 0 3px #1670BE;
+                    outline-offset: 0px;
+                    outline: none;
                     }
+                &_button{            
+                    button{
+                        margin-left: 2rem;
+                        padding: 10px 25px;
+                        background-color: #0066cc;
+                        border-radius: 5px;
+                        color: white;
+                        text-transform: uppercase;
+                    }
+    
                 }
-
             }
-
-            &_button{            
-                button{
-                    margin-left: 6.5rem;
-                    padding: 10px 25px;
-                    background-color: #0066cc;
-                    border-radius: 5px;
-                    color: white;
-                    text-transform: uppercase;
-                }
-
-            }
-
 
         }
 
         &_help{
             margin-top: 3rem;
-            height: 90vh;
+            height: 75vh;
             border: 1px dotted gray;
             padding-left: 20px;
             h1{
@@ -222,6 +444,16 @@
                     font-size: 21px;
                     font-weight: 500;
                     color: #333333;
+                    span{
+                        width: 20px;
+                        height: 20px;
+                        img{
+                            width: 20px;
+                            // background-color: #0066cc;
+                            height: 20px;
+                            // object-fit: contain;
+                        }
+                    }
                 }
                 h2{
                     font-size: 14px;
@@ -231,6 +463,11 @@
                 }
                 h2:hover{
                     color: #333333;
+                }
+                p{
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: #555555;
                 }
             }
         }
