@@ -91,17 +91,43 @@ body{
 
 #services-type{
     .services_type{
+        // background-color: red;
         display: flex;
-        justify-content: space-evenly;
         align-items: center;
-        overflow-x: scroll;
+        gap: 12px;
+        margin-top: 20px;
+        justify-content: space-between;
+
         scroll-snap-type: x mandatory;
         scroll-padding: 24px;
-        gap: 12px;
-    }
-    &_fully{
-        flex: 0 0 100%;
-        padding: 24px;
-        scroll-snap-type: start;
+        overflow-x: scroll;
+        height: 500px;
+        
+        &_fully,
+        &_style,
+        &_security{
+            // flex: 0 0 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 10px;
+            width: 600px;
+            // height: 600px;
+            scroll-snap-type: start;
+            border-bottom: #f1c306 5px solid;
+            background-color: red;
+
+            span{
+                i{
+                    padding: 30px 15px;
+                    // background-color:wheat;
+                    font-size: 60px;
+                    color: #ffffff;
+                    
+                }
+        
+            }
+        }
     }
 }
