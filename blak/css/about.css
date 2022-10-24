@@ -56,7 +56,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #landing-page {
-  background-image: url(../assents/img/15.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -90,13 +89,19 @@ h1, h2, h3, h4, h5, h6 {
 #landing-page .landing_page_carousel {
   position: absolute;
   width: 100%;
-  margin: 0;
-  top: 50%;
-  padding: 0;
-  background-color: red;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+#landing-page .landing_page_carousel button {
+  font-size: 2rem;
+  cursor: pointer;
+  background-color: rgba(61, 46, 46, 0.2);
+  color: white;
+}
+#landing-page .landing_page_carousel button:hover {
+  background-color: rgba(114, 114, 114, 0.8666666667);
 }
 
 #services-type .services_type {
