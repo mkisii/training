@@ -156,39 +156,63 @@
 
         }
         &_list{
-            // background-color: red;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            .items{
+            position: relative;
+            // display: flex;
+            &_carousel{
                 display: flex;
-                justify-content: center;
                 align-items: center;
-                width: 320px;
-                color: white;
-                flex-direction: column;
-                border: #c7c0c029 solid 1px;
-                span{
-                    margin-top: 2rem;
-                    i{
-                        font-size: 25px;
-                        color:#f1c306
+                justify-content: space-between;
+                margin: 8rem -4rem 0 -4rem;
+                // position:absolute;
+                button{
+                    padding: 30px;
+                    background-color: transparent;
+                    border-radius: 50%;
+                    outline: none;
+                    border: #f7f7f7 solid 1px;
+                  
+                }
+    
+            }
+            &_item{
+                // position: absolute;
+
+                // background-color: red;
+                margin-top: -8rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                overflow: hidden;
+                .items{
+                    width: 300px;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    color: white;
+                    flex-direction: column;
+                    border: #c7c0c029 solid 1px;
+                    span{
+                        margin-top: 2rem;
+                        i{
+                            font-size: 25px;
+                            color:#f1c306
+                        }
                     }
+                    h3{
+                        color: #ffffff;
+                        font-size: 20px;
+                        
+    
+                    }
+                    p{
+                        margin-top: 0 auto;
+                        color: #ffffff;
+                        opacity: 0.6;
+                        font-size: 10px;
+                    }
+    
                 }
-                h3{
-                    color: #ffffff;
-                    font-size: 20px;
-                    
-
-                }
-                p{
-                    margin-top: 0 auto;
-                    color: #ffffff;
-                    opacity: 0.6;
-                    font-size: 10px;
-                }
-
             }
         }
 
@@ -196,7 +220,7 @@
     }
 }
 #services-good{
-    border-bottom: 2px solid lightgray;
+    border-bottom: 2px solid #f7f7f7dd;
     .services_good{
         display: flex;
         justify-content: space-between;
@@ -262,4 +286,5 @@
     }
 
 }
+
 

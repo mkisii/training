@@ -1,0 +1,84 @@
+@import 'index.scss';
+@import 'about.scss';
+#main-header{
+    // margin-top: 5rem;
+    .main_nav{
+        // background-color: white;
+        color: black;
+    }
+}
+#company-creative{
+    background-image: url(../assents/img/team/19.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    .company_creative{
+        &_teams{
+            padding: 10rem 0;
+            
+            &_list{
+                position: relative;
+                overflow: hidden;
+                &:hover > .company_creative_teams_list_info {
+
+                    margin-top: -28rem;
+      
+
+                }
+                
+                &_info{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 10rem 0 0 2rem;
+                    padding-bottom: 5rem;
+                    transition: margin-top 300ms ease-in-out;
+                    position: absolute;
+                    .name{
+                
+                  
+                        width: 300px;
+                        background-color:#fccb06;
+
+                        h1{
+                            color:white;
+                            text-align:left ;
+                            margin: 5rem 0 -0.5rem 2rem;
+                            font-weight:500 ;
+                            text-transform: capitalize;
+                            font-size: 25px;
+                            
+                            
+                        }
+                        h2{
+                            color: white;
+                            margin-left: 2rem;
+                            font-size: 15px;
+                            
+                        }
+                        p{
+                            text-align: left;
+                            margin-left: 2rem;
+                            color: white;
+                        }
+                        ul{
+                            list-style-type: none;
+                            display: flex;
+                            li{
+                                padding: 10px;
+                                margin-bottom: 6rem;
+                                a{
+                                    color: #fff;
+                                    &:hover{
+                                        color: black;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
