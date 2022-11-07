@@ -5162,32 +5162,50 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 40px;
 }
 #services-features .services_features_list {
+  position: relative;
+}
+#services-features .services_features_list_carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8rem -4rem 0 -4rem;
+}
+#services-features .services_features_list_carousel button {
+  padding: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  outline: none;
+  border: #f7f7f7 solid 1px;
+}
+#services-features .services_features_list_item {
+  margin-top: -8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  overflow: hidden;
 }
-#services-features .services_features_list .items {
+#services-features .services_features_list_item .items {
+  width: 300px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  width: 320px;
   color: white;
   flex-direction: column;
   border: rgba(199, 192, 192, 0.1607843137) solid 1px;
 }
-#services-features .services_features_list .items span {
+#services-features .services_features_list_item .items span {
   margin-top: 2rem;
 }
-#services-features .services_features_list .items span i {
+#services-features .services_features_list_item .items span i {
   font-size: 25px;
   color: #f1c306;
 }
-#services-features .services_features_list .items h3 {
+#services-features .services_features_list_item .items h3 {
   color: #ffffff;
   font-size: 20px;
 }
-#services-features .services_features_list .items p {
+#services-features .services_features_list_item .items p {
   margin-top: 0 auto;
   color: #ffffff;
   opacity: 0.6;
