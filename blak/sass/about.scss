@@ -60,7 +60,7 @@
     .about_landing,
     .services_landing {
         padding-top:8rem;
-        z-index: 1;
+        // z-index: 1;
 
         // position: absolute;
  
@@ -70,6 +70,7 @@
             color: #fff;
             // background-color: #000;
             h1{
+                z-index: 3;
                 text-transform: uppercase;
                 align-items: center;
                 margin-bottom:-1rem;

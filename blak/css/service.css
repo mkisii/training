@@ -59,7 +59,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container {
-  width: 80%;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -171,23 +170,58 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(114, 114, 114, 0.8666666667);
 }
 
+#services-type {
+  position: relative;
+}
+#services-type #prevBtn {
+  position: absolute;
+  top: 50%;
+  left: 5rem;
+  font-size: 15px;
+  color: #000;
+  opacity: 0.8;
+  z-index: 5;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 1rem;
+  border: 1px solid rgb(199, 198, 198);
+}
+#services-type #nextBtn {
+  position: absolute;
+  top: 50%;
+  right: 6rem;
+  font-size: 15px;
+  color: rgb(17, 14, 14);
+  opacity: 0.8;
+  z-index: 5;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 1rem;
+  border: 1px solid rgb(199, 198, 198);
+}
 #services-type .services_type,
 #services-type .services_popular {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  justify-content: space-between;
+  padding: 0 1rem;
   background-color: #f6f6f6;
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
-  scroll-padding: 24px;
+  overflow: hidden;
 }
-#services-type .services_type_fully, #services-type .services_type_style, #services-type .services_type_type, #services-type .services_type_security,
-#services-type .services_popular_fully,
-#services-type .services_popular_style,
-#services-type .services_popular_type,
-#services-type .services_popular_security {
-  background-color: white;
+#services-type .services_type_item,
+#services-type .services_popular_item {
+  transition: transform 300ms ease-in-out;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+}
+#services-type .services_type_item_fully, #services-type .services_type_item_style, #services-type .services_type_item_type, #services-type .services_type_item_security,
+#services-type .services_popular_item_fully,
+#services-type .services_popular_item_style,
+#services-type .services_popular_item_type,
+#services-type .services_popular_item_security {
+  min-width: calc(33.3333333333% - 0.6666666667rem);
+  margin-right: 1rem;
+  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -196,19 +230,20 @@ h1, h2, h3, h4, h5, h6 {
   -ms-scroll-snap-type: start;
       scroll-snap-type: start;
   border-bottom: #f1c306 5px solid;
+  transition: tranform 300ms ease-in-out;
 }
-#services-type .services_type_fully:hover, #services-type .services_type_style:hover, #services-type .services_type_type:hover, #services-type .services_type_security:hover,
-#services-type .services_popular_fully:hover,
-#services-type .services_popular_style:hover,
-#services-type .services_popular_type:hover,
-#services-type .services_popular_security:hover {
+#services-type .services_type_item_fully:hover, #services-type .services_type_item_style:hover, #services-type .services_type_item_type:hover, #services-type .services_type_item_security:hover,
+#services-type .services_popular_item_fully:hover,
+#services-type .services_popular_item_style:hover,
+#services-type .services_popular_item_type:hover,
+#services-type .services_popular_item_security:hover {
   transform: scale(0.98);
 }
-#services-type .services_type_fully span i, #services-type .services_type_style span i, #services-type .services_type_type span i, #services-type .services_type_security span i,
-#services-type .services_popular_fully span i,
-#services-type .services_popular_style span i,
-#services-type .services_popular_type span i,
-#services-type .services_popular_security span i {
+#services-type .services_type_item_fully span i, #services-type .services_type_item_style span i, #services-type .services_type_item_type span i, #services-type .services_type_item_security span i,
+#services-type .services_popular_item_fully span i,
+#services-type .services_popular_item_style span i,
+#services-type .services_popular_item_type span i,
+#services-type .services_popular_item_security span i {
   margin-left: 5rem;
   padding: 20px 15px;
   font-size: 60px;
@@ -216,11 +251,11 @@ h1, h2, h3, h4, h5, h6 {
   text-align: left;
   margin-top: 1rem;
 }
-#services-type .services_type_fully h2, #services-type .services_type_style h2, #services-type .services_type_type h2, #services-type .services_type_security h2,
-#services-type .services_popular_fully h2,
-#services-type .services_popular_style h2,
-#services-type .services_popular_type h2,
-#services-type .services_popular_security h2 {
+#services-type .services_type_item_fully h2, #services-type .services_type_item_style h2, #services-type .services_type_item_type h2, #services-type .services_type_item_security h2,
+#services-type .services_popular_item_fully h2,
+#services-type .services_popular_item_style h2,
+#services-type .services_popular_item_type h2,
+#services-type .services_popular_item_security h2 {
   font-size: 18px;
   font-weight: 500;
   margin-left: 5rem;
@@ -228,39 +263,39 @@ h1, h2, h3, h4, h5, h6 {
   color: #272727;
   text-align: left;
 }
-#services-type .services_type_fully p, #services-type .services_type_style p, #services-type .services_type_type p, #services-type .services_type_security p,
-#services-type .services_popular_fully p,
-#services-type .services_popular_style p,
-#services-type .services_popular_type p,
-#services-type .services_popular_security p {
+#services-type .services_type_item_fully p, #services-type .services_type_item_style p, #services-type .services_type_item_type p, #services-type .services_type_item_security p,
+#services-type .services_popular_item_fully p,
+#services-type .services_popular_item_style p,
+#services-type .services_popular_item_type p,
+#services-type .services_popular_item_security p {
   margin-bottom: 2rem;
   text-align: left;
   margin-left: 5rem;
 }
-#services-type .services_type_fully a, #services-type .services_type_style a, #services-type .services_type_type a, #services-type .services_type_security a,
-#services-type .services_popular_fully a,
-#services-type .services_popular_style a,
-#services-type .services_popular_type a,
-#services-type .services_popular_security a {
+#services-type .services_type_item_fully a, #services-type .services_type_item_style a, #services-type .services_type_item_type a, #services-type .services_type_item_security a,
+#services-type .services_popular_item_fully a,
+#services-type .services_popular_item_style a,
+#services-type .services_popular_item_type a,
+#services-type .services_popular_item_security a {
   text-decoration: none;
   color: #101010;
   margin-bottom: 2rem;
   text-align: left;
   margin-left: 5rem;
 }
-#services-type .services_type_fully a i, #services-type .services_type_style a i, #services-type .services_type_type a i, #services-type .services_type_security a i,
-#services-type .services_popular_fully a i,
-#services-type .services_popular_style a i,
-#services-type .services_popular_type a i,
-#services-type .services_popular_security a i {
+#services-type .services_type_item_fully a i, #services-type .services_type_item_style a i, #services-type .services_type_item_type a i, #services-type .services_type_item_security a i,
+#services-type .services_popular_item_fully a i,
+#services-type .services_popular_item_style a i,
+#services-type .services_popular_item_type a i,
+#services-type .services_popular_item_security a i {
   margin-left: 0.5rem;
   color: #fccb06;
 }
-#services-type .services_type_fully a:hover, #services-type .services_type_style a:hover, #services-type .services_type_type a:hover, #services-type .services_type_security a:hover,
-#services-type .services_popular_fully a:hover,
-#services-type .services_popular_style a:hover,
-#services-type .services_popular_type a:hover,
-#services-type .services_popular_security a:hover {
+#services-type .services_type_item_fully a:hover, #services-type .services_type_item_style a:hover, #services-type .services_type_item_type a:hover, #services-type .services_type_item_security a:hover,
+#services-type .services_popular_item_fully a:hover,
+#services-type .services_popular_item_style a:hover,
+#services-type .services_popular_item_type a:hover,
+#services-type .services_popular_item_security a:hover {
   color: #fccb06;
 }
 
@@ -983,24 +1018,31 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
 }
-#company-clients .company_clients_reviews {
-  background-color: #fbfbfb;
+#company-clients .company_clients_items {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow: hidden;
 }
-#company-clients .company_clients_reviews span {
+#company-clients .company_clients_items_reviews {
+  background-color: #fbfbfb;
+  max-width: 300px;
+}
+#company-clients .company_clients_items_reviews span {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#company-clients .company_clients_reviews span i {
+#company-clients .company_clients_items_reviews span i {
   font-size: 50px;
   color: #f1c306;
   font-weight: 700;
   margin-top: -1.5rem;
 }
-#company-clients .company_clients_reviews p {
+#company-clients .company_clients_items_reviews p {
   margin-left: 7rem;
 }
-#company-clients .company_clients_reviews h2 {
+#company-clients .company_clients_items_reviews h2 {
   display: flex;
   align-items: flex-start;
   color: #272727;
@@ -1141,7 +1183,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container {
-  width: 80%;
   margin: 0 auto;
   max-width: 1200px;
 }
@@ -1253,23 +1294,58 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(114, 114, 114, 0.8666666667);
 }
 
+#services-type {
+  position: relative;
+}
+#services-type #prevBtn {
+  position: absolute;
+  top: 50%;
+  left: 5rem;
+  font-size: 15px;
+  color: #000;
+  opacity: 0.8;
+  z-index: 5;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 1rem;
+  border: 1px solid rgb(199, 198, 198);
+}
+#services-type #nextBtn {
+  position: absolute;
+  top: 50%;
+  right: 6rem;
+  font-size: 15px;
+  color: rgb(17, 14, 14);
+  opacity: 0.8;
+  z-index: 5;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 1rem;
+  border: 1px solid rgb(199, 198, 198);
+}
 #services-type .services_type,
 #services-type .services_popular {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  justify-content: space-between;
+  padding: 0 1rem;
   background-color: #f6f6f6;
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
-  scroll-padding: 24px;
+  overflow: hidden;
 }
-#services-type .services_type_fully, #services-type .services_type_style, #services-type .services_type_type, #services-type .services_type_security,
-#services-type .services_popular_fully,
-#services-type .services_popular_style,
-#services-type .services_popular_type,
-#services-type .services_popular_security {
-  background-color: white;
+#services-type .services_type_item,
+#services-type .services_popular_item {
+  transition: transform 300ms ease-in-out;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+}
+#services-type .services_type_item_fully, #services-type .services_type_item_style, #services-type .services_type_item_type, #services-type .services_type_item_security,
+#services-type .services_popular_item_fully,
+#services-type .services_popular_item_style,
+#services-type .services_popular_item_type,
+#services-type .services_popular_item_security {
+  min-width: calc(33.3333333333% - 0.6666666667rem);
+  margin-right: 1rem;
+  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -1278,19 +1354,20 @@ h1, h2, h3, h4, h5, h6 {
   -ms-scroll-snap-type: start;
       scroll-snap-type: start;
   border-bottom: #f1c306 5px solid;
+  transition: tranform 300ms ease-in-out;
 }
-#services-type .services_type_fully:hover, #services-type .services_type_style:hover, #services-type .services_type_type:hover, #services-type .services_type_security:hover,
-#services-type .services_popular_fully:hover,
-#services-type .services_popular_style:hover,
-#services-type .services_popular_type:hover,
-#services-type .services_popular_security:hover {
+#services-type .services_type_item_fully:hover, #services-type .services_type_item_style:hover, #services-type .services_type_item_type:hover, #services-type .services_type_item_security:hover,
+#services-type .services_popular_item_fully:hover,
+#services-type .services_popular_item_style:hover,
+#services-type .services_popular_item_type:hover,
+#services-type .services_popular_item_security:hover {
   transform: scale(0.98);
 }
-#services-type .services_type_fully span i, #services-type .services_type_style span i, #services-type .services_type_type span i, #services-type .services_type_security span i,
-#services-type .services_popular_fully span i,
-#services-type .services_popular_style span i,
-#services-type .services_popular_type span i,
-#services-type .services_popular_security span i {
+#services-type .services_type_item_fully span i, #services-type .services_type_item_style span i, #services-type .services_type_item_type span i, #services-type .services_type_item_security span i,
+#services-type .services_popular_item_fully span i,
+#services-type .services_popular_item_style span i,
+#services-type .services_popular_item_type span i,
+#services-type .services_popular_item_security span i {
   margin-left: 5rem;
   padding: 20px 15px;
   font-size: 60px;
@@ -1298,11 +1375,11 @@ h1, h2, h3, h4, h5, h6 {
   text-align: left;
   margin-top: 1rem;
 }
-#services-type .services_type_fully h2, #services-type .services_type_style h2, #services-type .services_type_type h2, #services-type .services_type_security h2,
-#services-type .services_popular_fully h2,
-#services-type .services_popular_style h2,
-#services-type .services_popular_type h2,
-#services-type .services_popular_security h2 {
+#services-type .services_type_item_fully h2, #services-type .services_type_item_style h2, #services-type .services_type_item_type h2, #services-type .services_type_item_security h2,
+#services-type .services_popular_item_fully h2,
+#services-type .services_popular_item_style h2,
+#services-type .services_popular_item_type h2,
+#services-type .services_popular_item_security h2 {
   font-size: 18px;
   font-weight: 500;
   margin-left: 5rem;
@@ -1310,39 +1387,39 @@ h1, h2, h3, h4, h5, h6 {
   color: #272727;
   text-align: left;
 }
-#services-type .services_type_fully p, #services-type .services_type_style p, #services-type .services_type_type p, #services-type .services_type_security p,
-#services-type .services_popular_fully p,
-#services-type .services_popular_style p,
-#services-type .services_popular_type p,
-#services-type .services_popular_security p {
+#services-type .services_type_item_fully p, #services-type .services_type_item_style p, #services-type .services_type_item_type p, #services-type .services_type_item_security p,
+#services-type .services_popular_item_fully p,
+#services-type .services_popular_item_style p,
+#services-type .services_popular_item_type p,
+#services-type .services_popular_item_security p {
   margin-bottom: 2rem;
   text-align: left;
   margin-left: 5rem;
 }
-#services-type .services_type_fully a, #services-type .services_type_style a, #services-type .services_type_type a, #services-type .services_type_security a,
-#services-type .services_popular_fully a,
-#services-type .services_popular_style a,
-#services-type .services_popular_type a,
-#services-type .services_popular_security a {
+#services-type .services_type_item_fully a, #services-type .services_type_item_style a, #services-type .services_type_item_type a, #services-type .services_type_item_security a,
+#services-type .services_popular_item_fully a,
+#services-type .services_popular_item_style a,
+#services-type .services_popular_item_type a,
+#services-type .services_popular_item_security a {
   text-decoration: none;
   color: #101010;
   margin-bottom: 2rem;
   text-align: left;
   margin-left: 5rem;
 }
-#services-type .services_type_fully a i, #services-type .services_type_style a i, #services-type .services_type_type a i, #services-type .services_type_security a i,
-#services-type .services_popular_fully a i,
-#services-type .services_popular_style a i,
-#services-type .services_popular_type a i,
-#services-type .services_popular_security a i {
+#services-type .services_type_item_fully a i, #services-type .services_type_item_style a i, #services-type .services_type_item_type a i, #services-type .services_type_item_security a i,
+#services-type .services_popular_item_fully a i,
+#services-type .services_popular_item_style a i,
+#services-type .services_popular_item_type a i,
+#services-type .services_popular_item_security a i {
   margin-left: 0.5rem;
   color: #fccb06;
 }
-#services-type .services_type_fully a:hover, #services-type .services_type_style a:hover, #services-type .services_type_type a:hover, #services-type .services_type_security a:hover,
-#services-type .services_popular_fully a:hover,
-#services-type .services_popular_style a:hover,
-#services-type .services_popular_type a:hover,
-#services-type .services_popular_security a:hover {
+#services-type .services_type_item_fully a:hover, #services-type .services_type_item_style a:hover, #services-type .services_type_item_type a:hover, #services-type .services_type_item_security a:hover,
+#services-type .services_popular_item_fully a:hover,
+#services-type .services_popular_item_style a:hover,
+#services-type .services_popular_item_type a:hover,
+#services-type .services_popular_item_security a:hover {
   color: #fccb06;
 }
 
@@ -2065,24 +2142,31 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
 }
-#company-clients .company_clients_reviews {
-  background-color: #fbfbfb;
+#company-clients .company_clients_items {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow: hidden;
 }
-#company-clients .company_clients_reviews span {
+#company-clients .company_clients_items_reviews {
+  background-color: #fbfbfb;
+  max-width: 300px;
+}
+#company-clients .company_clients_items_reviews span {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#company-clients .company_clients_reviews span i {
+#company-clients .company_clients_items_reviews span i {
   font-size: 50px;
   color: #f1c306;
   font-weight: 700;
   margin-top: -1.5rem;
 }
-#company-clients .company_clients_reviews p {
+#company-clients .company_clients_items_reviews p {
   margin-left: 7rem;
 }
-#company-clients .company_clients_reviews h2 {
+#company-clients .company_clients_items_reviews h2 {
   display: flex;
   align-items: flex-start;
   color: #272727;
@@ -2230,7 +2314,6 @@ h1, h2, h3, h4, h5, h6 {
 #services-landing .about_landing,
 #services-landing .services_landing {
   padding-top: 8rem;
-  z-index: 1;
 }
 #about-landing .about_landing_title,
 #about-landing .services_landing_title,
@@ -2243,6 +2326,7 @@ h1, h2, h3, h4, h5, h6 {
 #about-landing .services_landing_title h1,
 #services-landing .about_landing_title h1,
 #services-landing .services_landing_title h1 {
+  z-index: 3;
   text-transform: uppercase;
   align-items: center;
   margin-bottom: -1rem;
@@ -2629,6 +2713,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 5rem;
 }
 #services-features .services_features_title h3 {
+  z-index: 5;
   color: #ffffff;
   opacity: 0.6;
   font-size: 18px;

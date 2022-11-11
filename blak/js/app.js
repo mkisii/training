@@ -36,4 +36,61 @@ btns.forEach( (btn)=>{
 
 });
 
+const services = document.querySelector(".services_type_item");
+console.log(services.children);
+const buttons = document.querySelectorAll(".service-button button");
+ console.log(buttons)
+
+
+
+translateValue = 395;
+
+buttons.forEach(button =>{
+    button.addEventListener("click", ()=>{
+        // if(button.id==="prevBtn"){
+        //     services.style.transform = `translateX(-${translateValue}px)`;
+        //     translateValue -= 390;
+
+        if (button.id === "nextBtn"){
+            if (translateValue <= -((services.children.length-3) * 395)) {
+                translateValue =0;
+            }
+            console.log(translateValue);
+            // console.log((services.children.length-3) * 395);
+            services.style.transform = `translateX(-${translateValue}px)`;
+            translateValue += 395;
+        } else if (button.id === "prevBtn"){
+            if(translateValue > 0){
+                translateValue = -(services.children.length-3) * 395;
+            }
+            console.log(translateValue);
+            services.style.transform = `translateX(${translateValue}px)`;
+            translateValue += 395;
+        }
+    });
+});
+
+
+// COMPANY Clients
+
+let moveValue = 500;
+const clients = document.querySelector(".company_clients_items")
+clients.children[0].style.borderColor = " 1px solid red";
+function cycleArray() {
+    if (moveValue < (clients.children.length)){
+    }
+
+    
+
+
+    // reset counter if we reach end of array
+}
+setInterval(cycleArray, 2000);
+
+
+
+
+
+
+
 
