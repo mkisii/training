@@ -1,6 +1,4 @@
 const btns = document.querySelectorAll("[data-button]");
-// let button = document.querySelector(".next");
-// let button1 = document.querySelector(".prev");
 const landing = document.querySelector("#landing-page");
 console.log(btns)
 
@@ -14,7 +12,7 @@ const image = [
     "url(../assents/img/slider/19.jpg)",
 ];
 
-landing.style.backgroundImage = image[0];
+// landing.style.backgroundImage = image[0];
 let counter=0;
 
 btns.forEach( (btn)=>{
@@ -36,57 +34,78 @@ btns.forEach( (btn)=>{
 
 });
 
-const services = document.querySelector(".services_type_item");
-console.log(services.children);
-const buttons = document.querySelectorAll(".service-button button");
- console.log(buttons)
+const services1 = document.querySelector(".services_type_item");
+// console.log(services.children);
+const buttons1 = document.querySelectorAll(".service-button button");
+ console.log(buttons1)
 
 
 
-translateValue = 395;
-
-buttons.forEach(button =>{
-    button.addEventListener("click", ()=>{
-        // if(button.id==="prevBtn"){
-        //     services.style.transform = `translateX(-${translateValue}px)`;
-        //     translateValue -= 390;
-
-        if (button.id === "nextBtn"){
-            if (translateValue <= -((services.children.length-3) * 395)) {
-                translateValue =0;
+ function moverButton (buttons, services) {
+    let translateValue = services.firstElementChild.scrollWidth+16;
+    const childWidth = translateValue;
+    buttons.forEach(button =>{
+        button.addEventListener("click", ()=>{
+            if (button.id === "nextBtn"){
+                if (translateValue >= ((services.children.length-3) * childWidth)) {
+                    translateValue =0;
+                }
+                console.log("my value:" + translateValue);
+                // console.log((services.children.length-3) * 395);
+                services.style.transform = `translateX(-${translateValue}px)`;
+                translateValue += childWidth;
+                console.log( services.style.transform );
+            } else if (button.id === "prevBtn"){
+                if(translateValue > 0){
+                    translateValue = -(services.children.length-3) * childWidth;
+                }
+                console.log(translateValue);
+                services.style.transform = `translateX(${translateValue}px)`;
+                translateValue += childWidth;
             }
-            console.log(translateValue);
-            // console.log((services.children.length-3) * 395);
-            services.style.transform = `translateX(-${translateValue}px)`;
-            translateValue += 395;
-        } else if (button.id === "prevBtn"){
-            if(translateValue > 0){
-                translateValue = -(services.children.length-3) * 395;
-            }
-            console.log(translateValue);
-            services.style.transform = `translateX(${translateValue}px)`;
-            translateValue += 395;
-        }
+        });
     });
-});
+    return services, buttons;
+    
+
+}
+moverButton(buttons1, services1)
 
 
 // COMPANY Clients
 
-let moveValue = 500;
-const clients = document.querySelector(".company_clients_items")
-clients.children[0].style.borderColor = " 1px solid red";
+const clients = document.querySelectorAll(".company_clients_items_reviews")
+let moveValue = 616 ;
+let count = 0;
+let items = clients.length-1
 function cycleArray() {
-    if (moveValue < (clients.children.length)){
+    clients.forEach((client) =>{
+        // client.style.backgroundColor = "red";
+
+        client.style.transform =`translateX(-${moveValue}px)`;
+        console.log(moveValue);
+    })
+    moveValue +=616;
+    count ++;
+    console.log(count)
+    if(count == items){
+        moveValue = 0;
+        count=0;
     }
 
-    
 
 
-    // reset counter if we reach end of array
 }
-setInterval(cycleArray, 2000);
+// setInterval(cycleArray, 2000);
 
+// Teams fuction movers
+
+// const teams = document.querySelector(".company_creative_teams");
+// const teamBtn = document.querySelectorAll(".teams-button button");
+
+// moverButton(teamBtn, teams);
+
+export {moverButton};
 
 
 

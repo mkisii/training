@@ -817,11 +817,47 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-evenly;
   gap: 20px;
 }
-#company-creative .company_creative_teams_list {
-  width: 450px;
-}
-#company-creative .company_creative_teams_list img {
+#company-creative .company_creative_teams_list .image {
   width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+#company-creative .company_creative_teams_list .image img {
+  width: 100%;
+}
+#company-creative .company_creative_teams_list .image:hover .social {
+  visibility: visible;
+  transition: padding-top 300ms ease-in-out;
+  opacity: 10;
+}
+#company-creative .company_creative_teams_list .image .social {
+  visibility: hidden;
+  border: 1px solid white;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  margin-top: 15rem;
+  position: absolute;
+}
+#company-creative .company_creative_teams_list .image .social p {
+  text-align: center;
+}
+#company-creative .company_creative_teams_list .image .social ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#company-creative .company_creative_teams_list .image .social ul li {
+  padding: 10px;
+}
+#company-creative .company_creative_teams_list .image .social ul li a {
+  color: white;
 }
 #company-creative .company_creative_teams_list_info {
   display: flex;
@@ -830,22 +866,6 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   position: relative;
 }
-#company-creative .company_creative_teams_list_info_social {
-  position: absolute;
-  background-color: black;
-  border: 1px solid white;
-  width: 80%;
-  height: 220px;
-  z-index: -1;
-  margin-top: -15rem;
-}
-#company-creative .company_creative_teams_list_info_social ul {
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  color: white;
-}
 #company-creative .company_creative_teams_list_info_name {
   background-color: #ffffff;
   display: flex;
@@ -853,7 +873,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   width: 80%;
-  margin-top: -5rem;
+  margin: -5rem 0 6rem;
 }
 #company-creative .company_creative_teams_list_info_name h1 {
   color: #000;
@@ -872,6 +892,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #company-creative .company_creative_teams_list_info_name p {
   color: #fccb06;
+  margin-bottom: 4rem;
 }
 
 #company-features {
@@ -1022,17 +1043,20 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: center;
 }
 #company-clients .company_clients_items {
   display: flex;
-  flex-direction: row;
-  width: 100%;
+  align-items: center;
   overflow: hidden;
+  gap: 1rem;
 }
 #company-clients .company_clients_items_reviews {
+  min-width: 100%;
+  margin: 2rem auto;
+  width: 100%;
   background-color: #fbfbfb;
-  max-width: 300px;
+  transition: transform 400ms ease-in-out;
+  padding-bottom: 2rem;
 }
 #company-clients .company_clients_items_reviews span {
   display: flex;
@@ -1046,18 +1070,16 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: -1.5rem;
 }
 #company-clients .company_clients_items_reviews p {
-  margin-left: 7rem;
+  margin: 0 4rem 0 4rem;
 }
 #company-clients .company_clients_items_reviews h2 {
-  display: flex;
-  align-items: flex-start;
   color: #272727;
   font-size: 18px;
   font-weight: 500;
   line-height: 23px;
   text-align: left;
   padding-left: 0;
-  margin: 3rem 0 5rem 7rem;
+  margin: 3rem 0 3rem 4rem;
 }
 
 #company-partinership .company_partinership {
@@ -1076,6 +1098,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 #company-footer .company_footer {
   padding: 5rem 0 7rem;
+}
+@media (max-width: 800px) {
+  #company-footer .company_footer .company_footer {
+    flex-direction: column;
+  }
 }
 #company-footer .company_footer_items {
   display: flex;
@@ -1941,11 +1968,47 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-evenly;
   gap: 20px;
 }
-#company-creative .company_creative_teams_list {
-  width: 450px;
-}
-#company-creative .company_creative_teams_list img {
+#company-creative .company_creative_teams_list .image {
   width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+#company-creative .company_creative_teams_list .image img {
+  width: 100%;
+}
+#company-creative .company_creative_teams_list .image:hover .social {
+  visibility: visible;
+  transition: padding-top 300ms ease-in-out;
+  opacity: 10;
+}
+#company-creative .company_creative_teams_list .image .social {
+  visibility: hidden;
+  border: 1px solid white;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  margin-top: 15rem;
+  position: absolute;
+}
+#company-creative .company_creative_teams_list .image .social p {
+  text-align: center;
+}
+#company-creative .company_creative_teams_list .image .social ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#company-creative .company_creative_teams_list .image .social ul li {
+  padding: 10px;
+}
+#company-creative .company_creative_teams_list .image .social ul li a {
+  color: white;
 }
 #company-creative .company_creative_teams_list_info {
   display: flex;
@@ -1954,22 +2017,6 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   position: relative;
 }
-#company-creative .company_creative_teams_list_info_social {
-  position: absolute;
-  background-color: black;
-  border: 1px solid white;
-  width: 80%;
-  height: 220px;
-  z-index: -1;
-  margin-top: -15rem;
-}
-#company-creative .company_creative_teams_list_info_social ul {
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  color: white;
-}
 #company-creative .company_creative_teams_list_info_name {
   background-color: #ffffff;
   display: flex;
@@ -1977,7 +2024,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   width: 80%;
-  margin-top: -5rem;
+  margin: -5rem 0 6rem;
 }
 #company-creative .company_creative_teams_list_info_name h1 {
   color: #000;
@@ -1996,6 +2043,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #company-creative .company_creative_teams_list_info_name p {
   color: #fccb06;
+  margin-bottom: 4rem;
 }
 
 #company-features {
@@ -2146,17 +2194,20 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: center;
 }
 #company-clients .company_clients_items {
   display: flex;
-  flex-direction: row;
-  width: 100%;
+  align-items: center;
   overflow: hidden;
+  gap: 1rem;
 }
 #company-clients .company_clients_items_reviews {
+  min-width: 100%;
+  margin: 2rem auto;
+  width: 100%;
   background-color: #fbfbfb;
-  max-width: 300px;
+  transition: transform 400ms ease-in-out;
+  padding-bottom: 2rem;
 }
 #company-clients .company_clients_items_reviews span {
   display: flex;
@@ -2170,18 +2221,16 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: -1.5rem;
 }
 #company-clients .company_clients_items_reviews p {
-  margin-left: 7rem;
+  margin: 0 4rem 0 4rem;
 }
 #company-clients .company_clients_items_reviews h2 {
-  display: flex;
-  align-items: flex-start;
   color: #272727;
   font-size: 18px;
   font-weight: 500;
   line-height: 23px;
   text-align: left;
   padding-left: 0;
-  margin: 3rem 0 5rem 7rem;
+  margin: 3rem 0 3rem 4rem;
 }
 
 #company-partinership .company_partinership {
@@ -2200,6 +2249,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 #company-footer .company_footer {
   padding: 5rem 0 7rem;
+}
+@media (max-width: 800px) {
+  #company-footer .company_footer .company_footer {
+    flex-direction: column;
+  }
 }
 #company-footer .company_footer_items {
   display: flex;
@@ -3414,11 +3468,47 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-evenly;
   gap: 20px;
 }
-#company-creative .company_creative_teams_list {
-  width: 450px;
-}
-#company-creative .company_creative_teams_list img {
+#company-creative .company_creative_teams_list .image {
   width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+#company-creative .company_creative_teams_list .image img {
+  width: 100%;
+}
+#company-creative .company_creative_teams_list .image:hover .social {
+  visibility: visible;
+  transition: padding-top 300ms ease-in-out;
+  opacity: 10;
+}
+#company-creative .company_creative_teams_list .image .social {
+  visibility: hidden;
+  border: 1px solid white;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  margin-top: 15rem;
+  position: absolute;
+}
+#company-creative .company_creative_teams_list .image .social p {
+  text-align: center;
+}
+#company-creative .company_creative_teams_list .image .social ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#company-creative .company_creative_teams_list .image .social ul li {
+  padding: 10px;
+}
+#company-creative .company_creative_teams_list .image .social ul li a {
+  color: white;
 }
 #company-creative .company_creative_teams_list_info {
   display: flex;
@@ -3427,22 +3517,6 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   position: relative;
 }
-#company-creative .company_creative_teams_list_info_social {
-  position: absolute;
-  background-color: black;
-  border: 1px solid white;
-  width: 80%;
-  height: 220px;
-  z-index: -1;
-  margin-top: -15rem;
-}
-#company-creative .company_creative_teams_list_info_social ul {
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  color: white;
-}
 #company-creative .company_creative_teams_list_info_name {
   background-color: #ffffff;
   display: flex;
@@ -3450,7 +3524,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   width: 80%;
-  margin-top: -5rem;
+  margin: -5rem 0 6rem;
 }
 #company-creative .company_creative_teams_list_info_name h1 {
   color: #000;
@@ -3469,6 +3543,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #company-creative .company_creative_teams_list_info_name p {
   color: #fccb06;
+  margin-bottom: 4rem;
 }
 
 #company-features {
@@ -3619,17 +3694,20 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: center;
 }
 #company-clients .company_clients_items {
   display: flex;
-  flex-direction: row;
-  width: 100%;
+  align-items: center;
   overflow: hidden;
+  gap: 1rem;
 }
 #company-clients .company_clients_items_reviews {
+  min-width: 100%;
+  margin: 2rem auto;
+  width: 100%;
   background-color: #fbfbfb;
-  max-width: 300px;
+  transition: transform 400ms ease-in-out;
+  padding-bottom: 2rem;
 }
 #company-clients .company_clients_items_reviews span {
   display: flex;
@@ -3643,18 +3721,16 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: -1.5rem;
 }
 #company-clients .company_clients_items_reviews p {
-  margin-left: 7rem;
+  margin: 0 4rem 0 4rem;
 }
 #company-clients .company_clients_items_reviews h2 {
-  display: flex;
-  align-items: flex-start;
   color: #272727;
   font-size: 18px;
   font-weight: 500;
   line-height: 23px;
   text-align: left;
   padding-left: 0;
-  margin: 3rem 0 5rem 7rem;
+  margin: 3rem 0 3rem 4rem;
 }
 
 #company-partinership .company_partinership {
@@ -3673,6 +3749,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 #company-footer .company_footer {
   padding: 5rem 0 7rem;
+}
+@media (max-width: 800px) {
+  #company-footer .company_footer .company_footer {
+    flex-direction: column;
+  }
 }
 #company-footer .company_footer_items {
   display: flex;
@@ -4538,11 +4619,47 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-evenly;
   gap: 20px;
 }
-#company-creative .company_creative_teams_list {
-  width: 450px;
-}
-#company-creative .company_creative_teams_list img {
+#company-creative .company_creative_teams_list .image {
   width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+#company-creative .company_creative_teams_list .image img {
+  width: 100%;
+}
+#company-creative .company_creative_teams_list .image:hover .social {
+  visibility: visible;
+  transition: padding-top 300ms ease-in-out;
+  opacity: 10;
+}
+#company-creative .company_creative_teams_list .image .social {
+  visibility: hidden;
+  border: 1px solid white;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  margin-top: 15rem;
+  position: absolute;
+}
+#company-creative .company_creative_teams_list .image .social p {
+  text-align: center;
+}
+#company-creative .company_creative_teams_list .image .social ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#company-creative .company_creative_teams_list .image .social ul li {
+  padding: 10px;
+}
+#company-creative .company_creative_teams_list .image .social ul li a {
+  color: white;
 }
 #company-creative .company_creative_teams_list_info {
   display: flex;
@@ -4551,22 +4668,6 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   position: relative;
 }
-#company-creative .company_creative_teams_list_info_social {
-  position: absolute;
-  background-color: black;
-  border: 1px solid white;
-  width: 80%;
-  height: 220px;
-  z-index: -1;
-  margin-top: -15rem;
-}
-#company-creative .company_creative_teams_list_info_social ul {
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  color: white;
-}
 #company-creative .company_creative_teams_list_info_name {
   background-color: #ffffff;
   display: flex;
@@ -4574,7 +4675,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   width: 80%;
-  margin-top: -5rem;
+  margin: -5rem 0 6rem;
 }
 #company-creative .company_creative_teams_list_info_name h1 {
   color: #000;
@@ -4593,6 +4694,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #company-creative .company_creative_teams_list_info_name p {
   color: #fccb06;
+  margin-bottom: 4rem;
 }
 
 #company-features {
@@ -4743,17 +4845,20 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: center;
 }
 #company-clients .company_clients_items {
   display: flex;
-  flex-direction: row;
-  width: 100%;
+  align-items: center;
   overflow: hidden;
+  gap: 1rem;
 }
 #company-clients .company_clients_items_reviews {
+  min-width: 100%;
+  margin: 2rem auto;
+  width: 100%;
   background-color: #fbfbfb;
-  max-width: 300px;
+  transition: transform 400ms ease-in-out;
+  padding-bottom: 2rem;
 }
 #company-clients .company_clients_items_reviews span {
   display: flex;
@@ -4767,18 +4872,16 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: -1.5rem;
 }
 #company-clients .company_clients_items_reviews p {
-  margin-left: 7rem;
+  margin: 0 4rem 0 4rem;
 }
 #company-clients .company_clients_items_reviews h2 {
-  display: flex;
-  align-items: flex-start;
   color: #272727;
   font-size: 18px;
   font-weight: 500;
   line-height: 23px;
   text-align: left;
   padding-left: 0;
-  margin: 3rem 0 5rem 7rem;
+  margin: 3rem 0 3rem 4rem;
 }
 
 #company-partinership .company_partinership {
@@ -4797,6 +4900,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 #company-footer .company_footer {
   padding: 5rem 0 7rem;
+}
+@media (max-width: 800px) {
+  #company-footer .company_footer .company_footer {
+    flex-direction: column;
+  }
 }
 #company-footer .company_footer_items {
   display: flex;

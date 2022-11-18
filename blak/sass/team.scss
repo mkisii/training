@@ -12,13 +12,54 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    position: relative;
+    #prevBtn{
+
+        position: absolute;
+        top: 50%;
+        left: 5rem;
+        font-size: 15px;
+        color: #000;;
+        opacity: 0.8;
+        z-index: 5;
+        cursor: pointer;
+        border-radius: 50%;
+        // background: transparent;
+        padding: 1rem;
+        border: 1px solid rgb(199, 198, 198);
+        // background-color: #000;
+    }
+    #nextBtn{
+
+        position: absolute;
+        top: 50%;
+        right: 6rem;
+        font-size: 15px;
+        color: rgb(17, 14, 14);
+        opacity: 0.8;
+        z-index: 5;
+        cursor: pointer;
+        border-radius: 50%;
+        // background: transparent;
+        padding: 1rem;
+        border: 1px solid rgb(199, 198, 198);
+    }
+
+
     .company_creative{
         &_teams{
+            overflow: hidden;
             padding: 10rem 0;
             
+            // width: 100%;
             &_list{
+                min-width: calc((100%/3) - (2rem / 3));
+                border: #fccb06 2px solid;
                 position: relative;
                 overflow: hidden;
+                img{
+                    width: 100%;
+                }
                 &:hover > .company_creative_teams_list_info {
 
                     margin-top: -28rem;

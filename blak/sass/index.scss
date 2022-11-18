@@ -816,11 +816,60 @@ h1,h2,h3,h4,h5,h6{
             align-items: center;
             justify-content: space-evenly;
             gap: 20px;
-            // background-color: red;
+           
             &_list{
-                width:450px;
-                img{
+              
+                .image{
+                    // border: red 1px solid ;
                     width: 100%;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    position: relative;
+                    img{
+                        width: 100%;
+                    }
+                    &:hover  .social {
+                        
+                        visibility: visible;
+                        transition: padding-top 300ms ease-in-out;
+                        opacity: 10;
+                    }
+                    .social{
+                        // padding-top: 17rem;
+                        visibility: hidden;
+                        border: 1px solid white;
+                        width: 80%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        color: white;
+                        margin-top: 15rem ;
+                        position: absolute;
+                        // background-color: #000;
+                       
+                
+                        p{
+                            text-align: center;
+                        }
+                        ul{
+                            list-style-type: none;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-evenly;
+                            li{
+                                padding: 10px;
+                                a{
+                                    color: white;
+
+                                }
+
+                            }
+                        }
+    
+                    }
+
                 }
                 &_info{
                     display: flex;
@@ -829,23 +878,7 @@ h1,h2,h3,h4,h5,h6{
                     flex-direction: column;
                     position: relative;
 
-                    &_social{
-                        position: absolute;
-                        background-color:black;
-                        border: 1px solid white;
-                        width: 80%;
-                        height: 220px;
-                        z-index: -1;
-                        margin-top: -15rem;
-                        ul{
-                            list-style-type: none;
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-evenly;
-                            color: white;
-                        }
 
-                    }
                     &_name{
                         background-color: #ffffff;
                         display: flex;
@@ -853,8 +886,7 @@ h1,h2,h3,h4,h5,h6{
                         align-items: center;
                         justify-content: center;
                         width: 80%;
-                        // height: 220px;
-                        margin-top:-5rem ;
+                        margin:-5rem 0 6rem ;
                         h1{
                             color: #000;
                             line-height: 23px;
@@ -868,14 +900,15 @@ h1,h2,h3,h4,h5,h6{
                                 display: block;
                                 height: 2px;
                                 background-color: #fccb06;
-                                // margin: 0 auto;
-                                // color: white;
+                           
         
                             }
 
                         }
                         p{
                             color: #fccb06;
+                            margin-bottom:4rem ;
+
                         }
                     }
                 }
@@ -883,6 +916,7 @@ h1,h2,h3,h4,h5,h6{
         }
     }
 }
+
 #company-features{
     background-image: url(../assents/img/185.jpg);
     background-position: center center;
@@ -1078,16 +1112,20 @@ h1,h2,h3,h4,h5,h6{
         &_items{
             display: flex;
             align-items: center;
-            transition: transform 300ms ease-in-out;
             overflow: hidden;
             // border: 2rem red solid;
-       
+            
+            // border:  1px solid red;
+            gap: 1rem;
             
             &_reviews{
                 min-width: 100%;
                 margin: 2rem auto ;
                 width: 100%;
+            // border:  1px solid red;
+
                 background-color: #fbfbfb;
+                transition: transform 400ms ease-in-out;
                 // border: 1rem red solid;
            
 
@@ -1148,6 +1186,11 @@ h1,h2,h3,h4,h5,h6{
     .company_footer{
         // height: 600px;
         padding: 5rem 0 7rem;
+        @media (max-width: 800px) {
+            .company_footer {
+              flex-direction: column;
+            }
+          }
         &_items{
 
             display: flex;
