@@ -47,30 +47,66 @@ h1 {
   background: #06c40f;
   z-index: 0;
   left: 49.5%;
+  /* background-color: red; */
 }
 
 .outer-clock-face .marking {
-  background: #bdbdcb;
+  /* background: #bdbdcb; */
   width: 3px;
 }
+/* .outer-clock-face .marking.marking-one .one {
+  -webkit-transform: rotate(6deg);
+  -moz-transform: rotate(6deg);
+  transform: rotate(6deg);
+  background-color: rgb(68, 68, 149);
+
+}
+.outer-clock-face .marking.marking-one .one {
+  -webkit-transform: rotate(12deg);
+  -moz-transform: rotate(12deg);
+  transform: rotate(12deg);
+  background-color: rgb(68, 68, 149);
+
+}
+.outer-clock-face .marking.marking-one .one {
+  -webkit-transform: rotate(18deg);
+  -moz-transform: rotate(18deg);
+  transform: rotate(18deg);
+  background-color: rgb(68, 68, 149);
+
+} */
+
 
 .outer-clock-face .marking.marking-one {
   -webkit-transform: rotate(30deg);
   -moz-transform: rotate(30deg);
   transform: rotate(30deg);
+  background-color: blue;
 }
 
 .outer-clock-face .marking.marking-two {
   -webkit-transform: rotate(60deg);
   -moz-transform: rotate(60deg);
   transform: rotate(60deg);
+  /* background-color: white;   */
 }
+
+/* .outer-clock-face .marking.marking-two .two {
+  -webkit-transform: rotate(75deg);
+  -moz-transform: rotate(75deg);
+  transform: rotate(75deg);
+  background-color: rgb(68, 68, 149);
+
+} */
+
 .outer-clock-face .marking.marking-three {
   -webkit-transform: rotate(120deg);
   -moz-transform: rotate(120deg);
   transform: rotate(120deg);
+  background-color: cornflowerblue;
 }
 .outer-clock-face .marking.marking-four {
+  background-color: red;
   -webkit-transform: rotate(150deg);
   -moz-transform: rotate(150deg);
   transform: rotate(150deg);
@@ -82,7 +118,9 @@ h1 {
   left: 10%;
   width: 80%;
   height: 80%;
-  background: #282828;
+  background-image: url(../img/pd.jpg);
+  /* background-position: center center; */
+  /* background-repeat: no-repeat; */
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   border-radius: 100%;
@@ -97,7 +135,7 @@ h1 {
   height: 1rem;
   border-radius: 2.5rem;
   margin: -6px 0 0 -9px;
-  background: #656665;
+  background: #156315;
   z-index: 10;
 }
 
@@ -114,20 +152,34 @@ h1 {
   transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
 
+
 .hand.second-hand {
   background: rgb(126, 110, 110);
-  width: 45%;
-  height: 2px;
+  width: 40%;
+  height:2px;
   z-index: 11;
+  
 }
+/* .hand.second-hand::after{
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 27.5px 100px 27.5px;
+  border-color: transparent transparent #000 transparent;
+
+  
+
+} */
+
 .hand.minutes-hand {
   background: #ee791a;
-  width: 40%;
+  width: 30%;
   height: 4px;
   z-index: 10;
 }
 .hand.hour-hand {
-  width: 30%;
+  width: 25%;
   z-index: 3;
   background: red;
 }
